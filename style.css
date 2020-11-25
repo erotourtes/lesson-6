@@ -1,0 +1,47 @@
+.contenet {
+
+}
+.header {
+	width: 100%;
+	height: 200px;
+	margin: 0 auto;
+	background-color: orange;
+}
+.middlLeft {
+	width: 50%;
+	height: 200px;
+	margin: 0 auto;
+	background-color: blue;
+}
+.middlRight {
+	width: 50%;
+	height: 200px;
+	margin: 0 auto;
+	background-color: green;
+}
+.bottomLeft {
+	width: 33%;
+	height: 200px;
+	margin: 0 auto;
+	background-color: red;
+}
+.bottomMiddle {
+	width: 34%;
+	height: 200px;
+	margin: 0 auto;
+	background-color: yellow;
+}
+.bottomRight {
+	width: 33%;
+	height: 200px;
+	margin: 0 auto;
+	background-color: purple;
+}
+.text {
+	display: flex;
+	flex-direction: row;
+}
+.bottom {
+	display: flex;
+	flex-direction: row;
+}

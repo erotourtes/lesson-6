@@ -1,0 +1,37 @@
+.back {
+	width: 500px;
+	height: 500px;
+	border-radius: 25%;
+	background: rgb(255,227,0);
+	background: linear-gradient(45deg, rgba(255,227,0,1) 0%, rgba(255,5,5,1) 28%, rgba(157,85,140,1) 53%, rgba(146,83,209,1) 81%, rgba(84,92,178,1) 95%); 
+}
+
+.firstLine {
+	width: 75%;
+	height: 75%;
+	border: 30px solid white;
+	border-radius: 25%;
+	position: relative;
+	top: 30px;
+	left: 30px;
+}
+
+.middleCircle {
+	width: 50%;
+	height: 50%;
+	border: 30px solid white;
+	border-radius: 50%;
+	position: relative;
+	top: 65px;
+	left: 65px;
+}
+.circle {
+	width: 15%;
+	height: 15%;
+	border-radius: 50%;
+	background-color: white;
+	position: relative;
+	top: -220px;
+	left: 290px;
+}
+

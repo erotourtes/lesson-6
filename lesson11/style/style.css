@@ -1,0 +1,47 @@
+body {
+	background-image: url(https://cdn.zeebiz.com/sites/default/files/2019/02/04/72332-debit-card-blocked-pixabay.png);
+	
+	background-size: 100%; 
+	/*background: no-repeat center/100% url(https://cdn.zeebiz.com/sites/default/files/2019/02/04/72332-debit-card-blocked-pixabay.png);
+	*/
+}
+h1 {
+	background-color: #b0e0e6;
+	border-left: 5px solid red;
+	color: #c6ac54;
+}
+fieldset {
+	background-image: linear-gradient(#280050, #534275);
+	width: 300px;
+}
+legend {
+	color: red;
+}
+.d {
+	display: flex;
+	flex-direction: row;
+}
+div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+label {
+	color: #89cff0;
+}
+textarea:focus, input:focus {
+    color: green;
+}
+textarea:hover, input:hover {
+    color: red;
+}
+button:focus {
+	color: green;
+}
+button:hover {
+	color: red;
+}
+.in {
+	margin: 10px;
+}

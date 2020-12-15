@@ -1,0 +1,42 @@
+div {
+	position: relative;
+	left: 50%;
+}
+button::before {
+	content: '';
+	display: block;
+	transform-origin: 100%;
+	width: 100%;
+	height: 1px;
+	transform: scaleX(0);
+	background-color: red;
+	transition: all 0.2s;
+}
+button::after {
+	content: '';
+	display: block;
+	transform-origin: 100%;
+	width: 100%;
+	height: 1px;
+	transform: scaleX(0);
+	background-color: red;
+	transition: all 0.2s;
+}
+button:hover::after {
+	transform: scaleX(1);
+}
+button:hover::before {
+	transform: scaleX(1);
+}
+button {
+	color: #6eff33;
+	background-color: green;
+}
+.vote {
+	color:red;
+	background-color: pink;
+}
+.vote:focus {
+	position: absolute;
+	left: 50%;
+}

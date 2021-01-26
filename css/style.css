@@ -1,0 +1,25 @@
+.fa-affiliatetheme {
+	color: #8b4513;
+}
+.fa-address-card {
+	color: #adff2f;
+}
+.fa-algolia:hover {
+	transform: rotate(360deg);
+	transition-duration: 5s;
+}
+.fa-arrow-alt-circle-down:hover {
+	position: relative;
+	bottom: -50px;
+	transform: scale(2);
+	transition-duration: 5s;
+	color: #00bfff;
+}
+.fa-ankh {
+	color: #ffd700
+}
+.fa-spinner{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}

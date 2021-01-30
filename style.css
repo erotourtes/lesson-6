@@ -1,0 +1,63 @@
+h1 {
+	color: orange;
+}
+a {
+	text-decoration: none;
+	display: block;
+	padding-left: 10px;
+	color: #f5867e;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+/*First tier*/
+nav {
+	max-width: 220px;
+	margin-left: 50px;
+	background-color: #867ef5;
+}
+nav ul {
+	padding: 0;
+	max-width: 0;
+	list-style: none;
+	position: relative;
+}
+nav ul li {
+	width: 100px;
+	text-align: center;
+	display:inline-block;
+	background-color: #7ef586;
+}
+nav ul li a:hover {
+	background-color: #f5c27e;
+}
+
+/*Second tier*/
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+
+
+nav ul ul li {
+	width:170px;
+	position: relative;
+}
+
+/*third tier*/
+
+
+nav ul ul ul li {
+	min-width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+	top: -50px;
+	left: 85px;
+}
+
+
+nav ul li:hover > ul {
+	display:inherit;
+}

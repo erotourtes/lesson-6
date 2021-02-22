@@ -1,0 +1,102 @@
+h1, h3 {
+	text-align: center;
+	color: white;
+	 font-family: 'Allerta Stencil';font-size: 22px;
+}
+svg {
+	margin-top: 15px;
+}
+label, h6 {
+	color: white;
+	font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif
+}
+.container {
+	width: 600px;
+	height: 500px;
+	padding: 10px 5px 10px 5px;
+	background-color: #2c2656;
+	align-items: center;
+	margin: auto 0;	
+}
+#in {
+	display: flex;
+	flex-direction: row;
+}
+.inform {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.left {
+	width: 600px;
+	height: 380px;
+	background-color: #362d68;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px;
+}
+.left:hover {
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+	transition-delay: .5s;
+	transition-duration: 1s;
+}
+.right:hover {
+	-webkit-transform: scale(2);
+  	-ms-ransform: scale(2);
+  	transform: scale(1.8);
+  	background-color: #362d68;
+	box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;	
+	transition: all 1s ease 0s;
+}
+.arr {
+	background-color: #3f3579;
+}	
+.right {
+	height: 210px;
+	background-color: #3f3579;
+	border-radius: 0 2em 2em 0;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.gender, .phone, .vote {
+	padding-bottom: 25px;
+}
+
+
+.c {
+	position: relative;
+	left: -50px;
+	width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #3f3579;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.white:checked {
+	background-color: white;
+}
+.black:checked {
+	background-color: black;
+}
+.yellow:checked {
+	background-color: yellow;
+}
+.red:checked {
+	background-color: red;
+}
+.rainbow:checked {
+	background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
+}
+.h6_beta {
+	position: relative;
+	left: -80px;
+}
+

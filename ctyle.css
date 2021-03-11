@@ -1,0 +1,67 @@
+body {
+	background-color: red;
+}
+
+/*start card*/
+img {
+	width: 45px;
+}
+.card {
+	width: 400px;
+	height: 200px;
+	background: rgb(61,33,46);
+	background: linear-gradient(145deg, rgba(61,33,46,1) 0%, rgba(43,58,78,1) 100%); 
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+	border-radius: 20px;
+	padding: 20px;
+
+	position: relative;
+	left: 50px;
+	bottom: -50px;
+}
+.top {
+	display: flex;
+	justify-content: space-between;
+	color: #e6e6e6;
+	margin-bottom: 20px;   
+}
+.BottomCard {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;   
+}
+.h5Card {
+	color: #1a1a1a;
+	font: 15px "Fira Sans", sans-serif;
+}
+.h4Card {
+	color:#9a9a9a;
+}
+.cardNumberOutput {
+	width: 350px;
+}
+/*end card*/
+
+
+.cardData {
+	width: 500px;
+	height: 500px;
+	padding: 50px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+	text-align: center;
+	color: #0d0d0d;
+
+}
+.cardData div{
+	padding-bottom: 20px;
+}
+/*.cardNumber {
+
+}
+.name {
+*/
+.Bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}

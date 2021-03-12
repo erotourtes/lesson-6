@@ -1,5 +1,5 @@
 body {
-	background-color: red;
+    background-color:gray !important;
 }
 
 /*start card*/
@@ -38,7 +38,7 @@ img {
 	color:#9a9a9a;
 }
 .cardNumberOutput {
-	width: 350px;
+	width: 350px !important;
 }
 /*end card*/
 
@@ -64,4 +64,8 @@ img {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	align-items: flex-end;
+}
+.date, .CVV {
+	width: 100px  !important;
 }

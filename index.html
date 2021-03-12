@@ -11,6 +11,8 @@
 </head>
 
 	<div class="container">
+		
+
 		<div class="card">
 			<div class="top">
 				<img src ="https://pngimage.net/wp-content/uploads/2018/05/chip-png-1.png">
@@ -20,7 +22,7 @@
 			<div class="BottomCard">
 				<div>
 					<h5 class="h5Card">Card holder</h5>
-					<h4 class="h4Card">Nmae Surname</h4>
+					<h4 class="h4Card cardNameOutput">Nmae Surname</h4>
 				</div>
 				<div>
 					<h5 class="h5Card">Expire date</h5>
@@ -39,28 +41,22 @@
 
 			<div class="name">
 				<h3>Name</h3>
-				<input type="text" class="form-control name" id="basic-url" aria-describedby="basic-addon3" placeholder="Set your name">
+				<input type="text" class="form-control cardNameInput" id="basic-url" aria-describedby="basic-addon3" placeholder="Set your name">
 			</div>
 
 			<div class="Bottom">
 				<div>
 					<h3>Exp date</h3>
-					<select class="form-select" aria-label="Default select example">
-	  					<option selected value="1">January</option>
-	  					<option value="2">February</option>
-	  					<option value="3">Other</option>
+					<select class="form-select months" aria-label="Default select example">
 					</select>
 				</div>
 				<div>
-					<select class="form-select" aria-label="Default select example">
-	  					<option value="1">2023</option>
-	  					<option value="2">2022</option>
-	  					<option value="3">2021</option>
+					<select class="form-select date" aria-label="Default select example">
 					</select>
 				</div>
 				<div>
 					<h3>CVV</h3>
-					<input type="password" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="1111">
+					<input type="password" class="form-control CVV" id="basic-url" aria-describedby="basic-addon3" placeholder="1111">
 				</div>
 			</div>
 		</form>

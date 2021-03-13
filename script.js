@@ -32,12 +32,12 @@ function date (el) {
 	}
 }
 
-function change (inputV, outputV) {
-	
+function changeEl (inputV, outputV) {
 	let inV = document.querySelector(inputV)
 	let outV = document.querySelector(outputV)
 	inV.oninput = ()=>{
-		outV.innerHTML = inV.value
+		if (inV.value.length < 15)
+			outV.innerHTML = inV.value
 	}
 }
 
@@ -53,4 +53,4 @@ function changeInp (inputV, outputV) {
 months(".months")
 date(".date")
 changeInp(".cardNumberInput", ".cardNumberOutput")
-change(".cardNameInput", ".cardNameOutput")
+changeEl(".cardNameInput", ".cardNameOutput")

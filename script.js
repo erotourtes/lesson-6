@@ -4,7 +4,6 @@ let toDo = document.querySelector(".toDo")
 let maxCounter = 6
 let counter = 0
 
-
 function clearInput() {
 	inputValue.value = ""
 }
@@ -40,6 +39,18 @@ function addTask() {
 		//add
 		toDo.prepend(newDiv)
 		counter++
+
+		newCheckBox.addEventListener("click", ()=>{
+			if(newCheckBox.checked != false) {
+				let tempDiv = newDiv
+				toDo.removeChild(newDiv)
+				toDo.append(tempDiv)
+			} else {
+				let tempDiv = newDiv
+				toDo.removeChild(newDiv)
+				toDo.prepend(tempDiv)
+			}
+		})
 	}
 }
 

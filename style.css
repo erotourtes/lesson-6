@@ -25,6 +25,9 @@ a:hover {
 	display: grid;
 	grid-template-rows: repeat(4, 1fr);
 }
+
+
+/*----------------------------------------header*/
 .header {
 	width: 70%;
 	margin: 0 auto;
@@ -73,13 +76,13 @@ a:hover {
 }
 
 
-
+/*----------------------------------------inMainInfoInfo*/
 .inMainInfoInfo{
 	width: 250px;
 	height: 250px;
 	text-align: center;
 	color: #5a5aff;
-	padding: 50px;
+	padding-top: 25px;
 }
 .inMainInfoImg {
 	width: 100px;
@@ -87,7 +90,7 @@ a:hover {
 }
 
 
-
+/*----------------------------------------photos*/
 .ph {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -99,4 +102,17 @@ a:hover {
    height:300px;
    -o-object-fit:cover;
     object-fit:cover;
+}
+
+
+/*----------------------------------------people*/
+.people {
+	margin: 25px auto;
+	width: 250px;
+	height: 500px;
+	overflow: scroll;
+	text-align: center;
+}
+.people p {
+	text-align: left;
 }

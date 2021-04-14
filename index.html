@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>page</title>
+	<title>Main</title>
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="head.css">
 </head>
+<DIV ID = "toTop" > ^ up </DIV >
 <body>
 		<div class="container">
 			<header>
 				<div class="header">
 					<div class="head">
-						<div><a href="#">ActiveBox</a></div>
+						<div><a href="index/index.html" id="SELECTED">ActiveBox</a></div>
 						<div>	
-							<a href="#">Features</a>
-							<a href="#">Works</a>
-							<a href="#">Our Team</a>
-							<a href="#">Testimonails</a>
-							<a href="#">Download</a>
+							<a href="features.html">Features</a>
+							<a href="works.html">Works</a>
+							<a href="ourTeam.html">Our Team</a>
+							<a href="testimonails.html">Testimonails</a>
+							<a href="download.html">Download</a>
 						</div>
 					</div>
 
@@ -164,6 +166,40 @@
 
 		</div>
 
+		
+		<script src="https://unpkg.com/scrollreveal"></script>
 		<script type="text/javascript" src="script.js"></script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+ console.log("here")
+$(function() {
+ 
+$(window).scroll(function() {
+ 
+if($(this).scrollTop() != 0) {
+ 
+$('#toTop').fadeIn();
+ 
+} else {
+ 
+$('#toTop').fadeOut();
+ 
+}
+ 
+});
+ 
+$('#toTop').click(function() {
+ 
+$('body,html').animate({scrollTop:0},500);
+ 
+});
+ 
+});
+
+$("#mainBtn").click(()=> {$('body,html').animate({scrollTop:1600},500)})
+ 
+</script>
 </body>
 </html>

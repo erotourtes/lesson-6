@@ -1,0 +1,54 @@
+/*----------------------------------------header*/
+header {
+	width: 100%;
+	height: 500px;
+	/*background-image: url(img/bg.jpg);*/
+}
+
+.header {
+	width: 70%;
+	margin: 0 auto;
+	padding: 20px;
+}
+.head {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+}
+.head:after {
+	transition-duration: 1s;
+	content:"";
+	display: block;
+	position: absolute;
+	bottom: -6px;
+
+	height: 2px;
+	width: 100%;
+    border-top: 1px solid black;
+}
+.head:hover:after {
+	transition-duration: 1s;
+	bottom: -10px;
+	width: 0%;
+    border-top: 1px solid white;
+}
+.headInfo {
+	margin-top: 100px;
+	text-align: center;
+}
+#mainBtn {
+	transition-duration: 0.5s;
+	background-color: #5a5aff;
+	padding: 10px 20px 10px 20px;
+	display: inline-block;
+	margin-top: 75px;
+	border-radius: 2em;
+}
+#mainBtn:hover {
+	transition-duration: 1s;
+	background-color: #00468b;
+	color: white;
+	box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+

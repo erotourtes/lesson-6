@@ -6,7 +6,9 @@
 
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link rel="stylesheet" type="text/css" href="../head.css">
+	<link rel="stylesheet" type="text/css" href="../styles/features.css">
 </head>
+<DIV ID = "toTop" > ^ up </DIV >	
 <body>
 		<div class="container">
 			<header>
@@ -29,6 +31,19 @@
 						<p style="color: white; margin-top: 50px;">working at this</p>
 					</div>
 			</header>
+
+			<div class="colorBackground">
+				<h2 id="h2">Lorem ipsum dolo laborum.</h2>
+				<p id="p">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+
 			<footer>
 				<div class="header footer">
 					<div class="footerUp">
@@ -57,5 +72,21 @@
 		</div>
 		<script src="https://unpkg.com/scrollreveal"></script>
 		<script type="text/javascript" src="../script.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$(window).scroll(function() {
+	 		if($(this).scrollTop() != 0) {
+	 			$('#toTop').fadeIn();
+			} else {
+				$('#toTop').fadeOut();
+	 		}
+		});
+ 
+		$('#toTop').click(function() {
+	 		$('body,html').animate({scrollTop:0},500);
+	 	});
+	});
+</script>
 </body>
 </html>

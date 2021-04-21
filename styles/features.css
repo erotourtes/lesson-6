@@ -1,0 +1,54 @@
+.colorBackground {
+	text-align: center;
+	height: 100vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	animation: change 10s ease-in-out infinite;
+	padding: 50px;
+}
+#toTop {
+	background: linear-gradient(-135deg, #d5234d, #23d552, #ab23d5);
+	background-size: 400% 400%;
+	animation: change 2s ease-in-out infinite;
+	border: none;
+}
+a {
+	color: #eec552;
+}
+header {
+	background: linear-gradient(135deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	animation: change 10s ease-in-out infinite;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+	z-index: 100;
+}
+footer {
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	animation: change 10s ease-in-out infinite;
+}
+@keyframes change {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
+
+#h2{
+	display: block;
+	margin: auto auto;
+	width: 300px;
+	padding: 15px;
+	border: 2px solid white;
+}
+
+#p {
+	position: none;
+	margin-top: 50px;
+}

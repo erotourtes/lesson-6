@@ -1,0 +1,37 @@
+.text {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+h1 {
+/*	background: -webkit-linear-gradient(135deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  	background-size: 400% 400%;
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	animation: change 10s ease-in-out infinite;*/
+  	color: white;
+	position: relative;
+}
+.content {
+	height: 500px;
+	text-align: center;
+	padding: 50px;
+}
+p {
+	color: white;
+	position: relative;
+}
+
+
+/*@keyframes change {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}*/

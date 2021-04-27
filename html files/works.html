@@ -6,6 +6,7 @@
 
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link rel="stylesheet" type="text/css" href="../head.css">
+	<link rel="stylesheet" type="text/css" href="../styles/works.css">
 </head>
 <body>
 		<div class="container">
@@ -26,9 +27,17 @@
 				<div class="headInfo">
 						<h1 style="color: white;">Works</h1>
 						<h2 style="color: white;">╔3</h2>
-						<p style="color: white; margin-top: 50px;">working at this</p>
+						<p style="color: white; margin-top: 50px;">working on this</p>
 					</div>
 			</header>
+
+			<div class="content">
+				<p class="wave">Lorem</p>
+				<p class="wave1">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			</div>
+
 			<footer>
 				<div class="header footer">
 					<div class="footerUp">
@@ -55,7 +64,51 @@
 				</div>
 			</footer>
 		</div>
-		<script src="https://unpkg.com/scrollreveal"></script>
-		<script type="text/javascript" src="../script.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+	let textindex = 0
+	function wave(toChange, tag) {
+		const ELEMENTINDEX = textindex
+		let h = $(toChange)
+		let parent = h.parent()
+		let text = h.text().split("")
+
+		h.remove()
+
+		let div = $(`<div class = 'text ELEMENTINDEX${ELEMENTINDEX}'></div>`)
+		for(let i = 0; i < text.length; i++){
+			let newText = $(`<${tag}>${text[i]}</${tag}>`)
+			div.append(newText)
+		}
+		parent.prepend(div)
+
+		const time = 400
+		let interval = 100
+		if (text.length > 10)
+			interval = 1
+		let index = 1
+		setInterval(()=>{			
+
+			let a = $(`.ELEMENTINDEX${ELEMENTINDEX} ${tag}:nth-child(${index})`)
+			a.animate({top:'-20px', opacity: "1"},time)
+			
+			a.animate({top:'0px', opacity: "0.5"},time)
+			/*a.css({color: "#5a5aff"})*/
+			if (index > text.length)
+				index = 1
+			else
+				index++
+		}, interval)
+		textindex++
+
+	}
+	
+	wave("h1", "h1")
+	
+	wave(".wave1", "p")
+	wave(".wave", "p")
+</script>
 </body>
 </html>

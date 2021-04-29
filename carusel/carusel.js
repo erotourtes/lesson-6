@@ -16,8 +16,8 @@
 			let curImg = $(`#caruselPhoto${i}`)
 			indexPhoto = i
 			
-			prevImg.slideUp("fast")
-			curImg.slideDown()
+			prevImg.fadeOut("fast")
+			curImg.fadeIn()
 			
 			prevImg = curImg
 			dots.children().removeClass("selectedDot")
@@ -30,7 +30,7 @@
 	
 	setInterval(()=>{
 		//indexPhoto - current image
-		$(`#caruselPhoto${indexPhoto}`).slideUp("fast")
+		$(`#caruselPhoto${indexPhoto}`).fadeOut("fast")
 		
 		let next
 		if (indexPhoto + 1 >= images.length){

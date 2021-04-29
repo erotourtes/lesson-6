@@ -15,7 +15,7 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	position: relative;
-	flex-wrap: wrap
+	flex-wrap: wrap;
 }
 .head:after {
 	transition-duration: 1s;
@@ -30,7 +30,7 @@ header {
 
     transform: scale(1, 1);
 }
-.head:hover:after {
+.head:hover:after{
 	transition-duration: 0.3s ease;
 	bottom: -10px;
     border-top: 1px solid white;

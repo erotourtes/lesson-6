@@ -1,0 +1,105 @@
+h3 {
+	text-align: center;
+	color: white;
+}
+
+
+.participants {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	position: relative;
+
+	
+}
+.participants img{
+	width: 150px;
+	height: 150px;
+	touch-action: none;
+}
+
+
+.participant {
+	width: 150px;
+	height: 200px;
+	margin: 25px;
+	border-radius: 2em;
+	overflow: hidden;
+
+	position: relative;
+	background-color: #5a5aff;
+}
+.participant p {
+	text-align: center;
+	color: yellow;
+	cursor: move;
+}
+		
+
+.infoInParticipant{
+	background-color: rgba(0,0,0,.7);
+}
+
+.infoInParticipant h3 {
+	position: relative;
+	top: -20px;
+	color: orange;
+	font: 24pt georgia;
+}
+.infoInParticipant p {
+	position: relative;
+	top: 15px;
+	color: orange;
+	font: 12pt georgia;
+}
+.infoInParticipant {
+	width: 100%;
+	height: 150px;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.bookmark {
+	background-color: transparent;
+	/*width: 20px;
+	height: 20px;*/
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	top: 0px;
+	left: 120px;
+}
+.bookmark span:nth-child(1) {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0px 0 10px 10px;
+	border-color: transparent transparent transparent white;
+
+
+	position: relative;
+	top: 0px;
+	left: 1px;	
+}	
+.bookmark span:nth-child(2) {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0px 10px 15px 0;
+	border-color: transparent white transparent transparent;
+
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.bookmark:hover span:nth-child(1){
+	border-color: transparent transparent transparent red !important;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.bookmark:hover span:nth-child(2){
+	border-color: transparent red transparent transparent !important;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}

@@ -6,6 +6,7 @@
 
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link rel="stylesheet" type="text/css" href="../head.css">
+	<link rel="stylesheet" type="text/css" href="../styles/ourTeam.css">
 </head>
 <body>
 		<div class="container">
@@ -29,6 +30,14 @@
 						<p style="color: white; margin-top: 50px;">working at this</p>
 					</div>
 			</header>
+
+			<div class="content">
+				<div class="persones">
+					<h3>Members</h3>
+					<div class="participants"></div>
+				</div>
+			</div>
+
 			<footer>
 				<div class="header footer">
 					<div class="footerUp">
@@ -57,5 +66,90 @@
 		</div>
 		<script src="https://unpkg.com/scrollreveal"></script>
 		<script type="text/javascript" src="../script.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+			//add elements
+			for(let i = 1; i <= 6; i++){
+				let toAppend = $(`
+					<div class="participant">
+						<div>
+							<img src="../img/jojo/${i}.png">
+							<div class="infoInParticipant">
+								<h3>JoJo</h3>
+								<div class="bookmark"><span></span><span></span></div>
+								<p>its a cartoon</p>
+							</div>
+						</div>
+						<p>#${i}</p>
+					</div>`)
+
+				$(".participants").append(toAppend)
+			}
+
+			let positions = [1,2,3,4,5,6]
+
+			//change elements
+			let infoInParticipant = $(`.infoInParticipant`)
+
+			for(let i = 0; i < infoInParticipant.length; i++){
+				let ifChange = true
+				let main = $(`.participants .participant:nth-child(${positions[i]})`)
+				let toChange = $(`.participants .participant:nth-child(${positions[i]}) div .infoInParticipant`)
+				toChange.fadeOut(100)
+
+
+				main.mouseover( ()=>{
+					$(toChange).fadeIn(200)
+					$(main).css({overflow: "visible"})
+				})
+				main.mouseleave( ()=>{
+					$(toChange).fadeOut()
+					$(main).css({overflow: "hidden"})
+				})
+
+				let bookmark = $(`.participants .participant:nth-child(${positions[i]}) div .infoInParticipant .bookmark`)
+
+				bookmark.on("click", ()=>{
+					let bookmark1 = $(`.participants .participant:nth-child(${positions[i]}) div .infoInParticipant .bookmark span:nth-child(1)`)
+					let bookmark2 = $(`.participants .participant:nth-child(${positions[i]}) div .infoInParticipant .bookmark span:nth-child(2)`)
+
+					if (ifChange){
+						$(".participants").prepend(main)
+						for(let j = 0; j < positions.length; j++){
+							if(positions[j] < positions[i])
+								positions[j]++
+						}
+								
+						positions[i] = 1
+
+
+						bookmark1.css({"border-color": "transparent transparent transparent grey"})
+						bookmark2.css({"border-color": "transparent grey transparent transparent"})
+
+						ifChange = false
+					} else {
+						$(".participants").append(main)
+						for(let j = 0; j < positions.length; j++){
+							if(positions[j] > positions[i])
+								positions[j]--
+						}
+						positions[i] = positions.length
+
+
+						bookmark1.css({"border-color": "transparent transparent transparent white"})
+						bookmark2.css({"border-color": "transparent white transparent transparent"})
+						
+						ifChange = true
+
+					}
+
+
+					
+				})
+
+			}
+
+		</script>
 </body>
 </html>

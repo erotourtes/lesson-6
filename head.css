@@ -26,12 +26,16 @@ header {
 	height: 2px;
 	width: 100%;
     border-top: 1px solid black;
+
+    transform: scale(1, 1);
 }
 .head:hover:after {
-	transition-duration: 1s;
+	transition-duration: 0.3s ease;
 	bottom: -10px;
-	width: 0%;
     border-top: 1px solid white;
+
+    transform: scale(0, 1);
+    transition-delay: 0.5s;
 }
 .headInfo {
 	margin-top: 100px;

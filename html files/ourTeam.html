@@ -69,25 +69,38 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		
 		<script type="text/javascript">
+			let text = [
+				{index: 1, h3:"JoJo", pInfoInParticipant: "Gwess Av", pParticipant: "#"},
+				{index: 2, h3:"JoJo", pInfoInParticipant: "Jolyne Av", pParticipant: "#"},
+				{index: 3, h3:"JoJo", pInfoInParticipant: "Jotaro", pParticipant: "#"},
+				{index: 4, h3:"JoJo", pInfoInParticipant: "Star Platinim", pParticipant: "#"},
+				{index: 5, h3:"JoJo", pInfoInParticipant: "Sports Maxx Av", pParticipant: "#"},
+				{index: 6, h3:"JoJo", pInfoInParticipant: "Star Platinum6", pParticipant: "#"},
+				{index: 7, h3:"JoJo", pInfoInParticipant: "Limp Bizkit Av", pParticipant: "#"},
+				{index: 8, h3:"JoJo", pInfoInParticipant: "Planet Waves Av", pParticipant: "#"},
+				{index: 9, h3:"JoJo", pInfoInParticipant: "Stray Cat Manga Av", pParticipant: "#"},
+			]
 			//add elements
-			for(let i = 1; i <= 6; i++){
+			for(let i = 1; i <= text.length; i++){
 				let toAppend = $(`
 					<div class="participant">
 						<div>
 							<img src="../img/jojo/${i}.png">
 							<div class="infoInParticipant">
-								<h3>JoJo</h3>
+								<h3>${text[i-1].h3}</h3>
 								<div class="bookmark"><span></span><span></span></div>
-								<p>its a cartoon</p>
+								<p>${text[i-1].pInfoInParticipant}</p>
 							</div>
 						</div>
-						<p>#${i}</p>
+						<p>${text[i-1].pParticipant + i}</p>
 					</div>`)
 
 				$(".participants").append(toAppend)
 			}
 
-			let positions = [1,2,3,4,5,6]
+			let positions = []
+			for(let i = 1; i <= text.length; i++)
+				positions[i-1] = i
 
 			//change elements
 			let infoInParticipant = $(`.infoInParticipant`)

@@ -38,6 +38,8 @@ h3 {
 	padding: 50px;
 	color: white;
 	overflow:auto;
+
+	position: relative;
 }
 
 .content p:nth-child(odd){
@@ -56,4 +58,10 @@ h3 {
 	text-align: right;
 	position: relative;
 	left: 60%;
+}
+.content img {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;  
+	object-position: 100% 10%;
 }

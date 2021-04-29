@@ -1,8 +1,9 @@
-.carusel {
+	.carusel {
 		width: 100%;
 		height: 500px;
 		display: flex;
 		flex-direction: row;
+		overflow: scroll;
 	}
 
 	.photosCarusel{

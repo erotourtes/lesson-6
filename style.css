@@ -37,14 +37,14 @@ header {
 	height: 500px;
 	/*background-image: url(img/bg.jpg);*/
 }
-a {
+header a {
 	transition-duration: 1s;
 	color: #5aacff;
 	text-decoration: none;
 	margin: 10px;
 	font-size: 20px;
 }
-a:hover {
+.head a:hover {
 	transition-duration: 1s;
 	color: white;
 	padding: 10px;
@@ -65,6 +65,8 @@ a:hover {
 	text-align: center;
 	color: #5a5aff;
 	padding-top: 25px;
+
+
 }
 .inMainInfoImg {
 	width: 100px;
@@ -78,6 +80,9 @@ a:hover {
 	grid-template-columns: repeat(4, 1fr);
 	grid-column-gap: 0px;
     grid-row-gap: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .ph > img {
    -o-object-fit:cover;

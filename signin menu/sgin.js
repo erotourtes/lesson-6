@@ -9,17 +9,22 @@ panel.hide()
 sh.hide()
 
 btn.on("click", ()=>{
-		
-	panel.fadeToggle()
-	sh.toggle()
-	$("body").css({overflow: "hidden"})
+	if (!panel.is(':animated')) {
+		panel.fadeToggle()
+		sh.toggle()
+		$("body").css({overflow: "hidden"})
+	}
 })
 sh.on("click", ()=>{
-	panel.fadeToggle(100)
-	setTimeout(()=>sh.fadeOut(), 250)
-		
-	$("body").css({overflow: "visible"})
+	if (!panel.is(':animated')) {
+		panel.fadeOut(100)
+		sh.hide()
+			
+		$("body").css({overflow: "visible"})
+	}
 })
+
+
 
 
 let ifEmail = false
@@ -59,5 +64,4 @@ $("#logbtn").on("click", ()=>{
 	}
 
 	document.querySelector("#logbtn").setAttribute("onclick", "location.href='../index.html'")
-
 })

@@ -1,0 +1,199 @@
+body {
+	height: 1000px
+}
+.menuBtn{
+	position: fixed;
+	top: 50%;
+	margin-top: -100px;
+
+	z-index: 49;
+}
+.triangle-right {
+	transition-duration: 1s;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 0 50px 20px;
+    border-color: transparent transparent transparent #6980fe;
+}
+.triangle-right:hover {
+	transition-duration: .5s;
+	border-width: 100px 0 100px 40px;
+	margin-top: -50px;
+}
+.menu {
+	position: fixed;
+	width: 300px;
+	border-radius: 0em 1em 1em 0em;
+	background-color: #6980fe;
+
+	z-index: 50;
+	text-align: center;
+}
+
+.SHADOW {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 48;
+	background-color: rgba(0,0,0,.5);
+}
+
+.menu h3 {
+	color: #fee769;
+	margin: 10px;
+	padding: 10px 2px 10px 2px;
+	border: 2px solid white;
+	display: block;
+	text-transform: uppercase;
+}
+
+
+
+
+.COOLANIMATION	{
+	color: transparent !important; 
+}
+.COOLANIMATION:before {
+	content: attr(data-text);
+	height: 100%;
+	width: 100%;
+
+	position: absolute;
+	left: 0px;
+
+	color: #fee769;
+
+	transform: translateX(0);
+	transition: 0.5s;
+
+	pointer-events: none;
+}
+.COOLANIMATION:hover:before {
+	transform: translateX(100%);
+	opacity: 0;
+}
+.COOLANIMATION:after {
+	content: attr(data-text);
+	height: 100%;
+	width: 100%;
+
+
+	position: absolute;
+	left: 0px;
+
+	color: #fee769;
+	
+	transform: translateX(-100%);
+	transition: 0.5s;
+
+	pointer-events: none;
+	opacity: 0;
+}
+.COOLANIMATION:hover:after {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+
+
+
+.textInChangeColor {
+	height: 100px;
+	background-color: #80fe69;
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.textInChangeColor p {
+    color: #fe6980;
+    font: 17pt sans-serif; 
+    transform: translateX(0);
+	transition: 0.5s;
+}
+.textInChangeColor p:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+
+    display: block;
+	position: absolute;
+
+    border-top: 2px solid white;
+}
+.textInChangeColor:hover p {
+	transform: translateX(100%);
+	opacity: 0;
+}
+
+.changeColor {
+	position: relative;
+}
+
+.colors {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	width: 100%;
+
+
+	position: absolute;
+	left: 0px;
+	top: 25px;
+
+	transform: translateX(-100%);
+	transition: 0.5s;
+	opacity: 1;
+}
+.changeColor:hover .textInChangeColor p {
+	transform: translateX(100%);
+	opacity: 0;
+}
+.changeColor:hover .colors {
+	transform: translateX(0%);
+	opacity: 1;
+}
+
+
+
+
+
+.colors div {
+	transition-duration: 0.5s;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+
+}
+.colors div:hover {
+	transition-duration: 0.5s;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	width: 55px;
+	height: 55px;
+	margin-top: -5px;
+}
+.yellow {
+	background-color: yellow;
+}
+.white {
+	background-color: white;
+}
+.blue {
+	background-color: #000058;
+}
+.black {
+	background-color: black;
+}
+
+
+.selectedColor {
+	border: 2px solid #69fee7;
+	box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+

@@ -1,4 +1,19 @@
-ScrollReveal().reveal("footer div")
+try {
+	ScrollReveal().reveal("footer div", {
+	    delay: 50,
+	    duration: 500,
+	    reset: true
+	})
+	ScrollReveal().reveal("header div", {
+	    delay: 50,
+	    duration: 500,
+	    reset: true
+	})
+} catch (e) {
+	console.log("have no SCROLLREVEAL " + e)
+}
+
+
 
 try {
 	let a = document.querySelector(".ph")
@@ -22,7 +37,7 @@ $(window).scroll(()=> {
 
 		let toAppend = $(`
 					<div class= "linkA" style = "position: fixed; top:0px; width:100%; height: 50px; background-image: url('img/bg.jpg')">
-						<div class="head" style = " position: relative; top:10px; width: 70%; margin: 0 auto">
+						<div class="head" style = " position: relative; top:15px; width: 70%; margin: 0 auto">
 							<div><a href="index/index.html" id="SELECTED">ActiveBox</a></div>
 							<div>	
 								<a href="html files/features.html">Features</a>

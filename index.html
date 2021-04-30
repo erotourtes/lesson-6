@@ -7,9 +7,77 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="head.css">
 	<link rel="stylesheet" type="text/css" href="carusel/carusel.css">
+
+	<link rel="stylesheet" type="text/css" href="menu/style.css">
+	<link rel="stylesheet" type="text/css" href="signin menu/sgin.css">
 </head>
-<DIV ID = "toTop" > ^ up </DIV >
+<DIV ID = "toTop" > ^ up </DIV>
 <body>
+		<div id="logInPanel">
+			<div class="errMasages"><p></p></div>
+			<img src="img/geers.png" style="display: block; position: relative; right: 50px;">
+			<h1 style="position: relative; top: -150px; right: -50px;">greetings</h1>
+			<div style="position: relative; top: -150px;">
+				<input id="email" type="text" name="email" placeholder="email .com">
+				<input id="password" type="password" name="email" placeholder="password">
+			</div>
+			<a href="#" id="logbtn">Log in</a>	
+		</div>
+		<div class="shadow"></div>
+
+
+
+	<div class="menuBtn">
+		<div class="triangle-right"></div>
+	</div>
+	<div class="menu">
+		<h3 class="COOLANIMATION" data-text="Menu">Menu</h3>
+
+		<div style="height: 500px; display: flex; flex-direction: column; justify-content: space-between;">
+			<div class="changeColor changeColor0">
+				<div class="textInChangeColor">
+					<p>Change head color</p>
+				</div>
+				
+				<div class="colors">
+					<div class="yellow"></div>
+					<div class="white"></div>
+					<div class="selectedColor blue"></div>
+					<div class="black"></div>
+				</div>
+			</div>
+			<div class="changeColor changeColor1">
+				<div class="textInChangeColor">
+					<p>Change text color</p>
+				</div>
+				
+				<div class="colors">
+					<div class="yellow"></div>
+					<div class="white"></div>
+					<div class="selectedColor blue"></div>
+					<div class="black"></div>
+				</div>
+			</div>
+			<div class="changeColor changeColor2">
+				<div class="textInChangeColor">
+					<p>Change background color</p>
+				</div>
+				
+				<div class="colors">
+					<div class="yellow"></div>
+					<div class="white"></div>
+					<div class="selectedColor blue"></div>
+					<div class="black"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<a style="position: absolute; bottom: 10px; right: 10px;" id="toLogIn" href="#">Log in / Sign in</a>
+	</div>
+	<div class="SHADOW"></div>
+
+
 		<div class="container">
 			<header class="toChangeOnScroll" style="z-index: 100">
 				<div class="header">
@@ -183,7 +251,6 @@
 					<p>Created with love♦</p>
 				</div>
 			</footer>
-
 		</div>
 
 		
@@ -192,7 +259,8 @@
  		<script type="text/javascript" src="carusel/carusel.js"></script>
  		<script type="text/javascript" src="script.js"></script>
 
-
+ 		<script type="text/javascript" src="menu/script.js"></script>
+ 		<script type="text/javascript" src="signin menu/sgin.js"></script>
 <script type="text/javascript">
 $(function() {
 	$(window).scroll(function() {

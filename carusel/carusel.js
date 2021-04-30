@@ -30,7 +30,7 @@
 	
 	setInterval(()=>{
 		//indexPhoto - current image
-		$(`#caruselPhoto${indexPhoto}`).fadeOut("fast")
+		$(`#caruselPhoto${indexPhoto}`).slideUp("fast")
 		
 		let next
 		if (indexPhoto + 1 >= images.length){
@@ -39,7 +39,7 @@
 		} else
 			next = $(`#caruselPhoto${++indexPhoto}`)
 
-		next.slideDown()
+		next.fadeIn()
 
 		dots.children().removeClass("selectedDot")
 		$(`.dots div:nth-child(${indexPhoto + 1})`).addClass("selectedDot")

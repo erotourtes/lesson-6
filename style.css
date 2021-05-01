@@ -9,7 +9,13 @@ body {
    user-select: none;
 }
 #SELECTED {
-	color: #ffad5a;
+	color: #ffad5a ;
+}
+#SELECTED:after {
+	color: #ffad5a !important;
+}
+#SELECTED:before {
+	color: #ffad5a !important;
 }
 #toTop {
 width:100px;

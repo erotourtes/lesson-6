@@ -74,15 +74,8 @@ input {
 	transition-property: background-color, border-radius, color;
 }
 #dwlink:hover {
-	transition-duration: 2s ease;
-
-	background-color: orange;
 	color: white;
-	padding: 50px;
-	border: 2px solid white;
-	border-radius: 1em;
 }
-
 
 @keyframes change {
 	0%{

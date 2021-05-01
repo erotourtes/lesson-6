@@ -25,8 +25,6 @@ sh.on("click", ()=>{
 })
 
 
-
-
 let ifEmail = false
 let ifPsss= false
 let e = $(".errMasages")
@@ -63,5 +61,5 @@ $("#logbtn").on("click", ()=>{
 		return
 	}
 
-	document.querySelector("#logbtn").setAttribute("onclick", "location.href='../index.html'")
+	document.querySelector("#logbtn").setAttribute("onclick", `location.href='${path}index.html'`)
 })

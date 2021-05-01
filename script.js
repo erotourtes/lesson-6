@@ -26,11 +26,24 @@ try {
 	console.log(e)
 }
 
+let fileName = document.location.href
+let fileNameReady = ""
+for(let i = fileName.length-1; i > -1; i--){
+	let el = fileName[i]
+
+	if (el == "/") 
+		break
+	fileNameReady +=el
+}
+
+
+fileNameReady = fileNameReady.split("").reverse().join("")
+let path = "../"
+if(fileNameReady === "index.html")
+	path = ""
+
+
 $(window).scroll(()=> {
-
-
-
-
   	let scrollHeight = document.querySelector("html").scrollTop
 	if (scrollHeight > 499) {
 		let el = $(".toChangeOnScroll")
@@ -38,13 +51,13 @@ $(window).scroll(()=> {
 		let toAppend = $(`
 					<div class= "linkA" style = "position: fixed; top:0px; width:100%; height: 50px; background-image: url('img/bg.jpg')">
 						<div class="head" style = " position: relative; top:15px; width: 70%; margin: 0 auto">
-							<div><a href="index/index.html" id="SELECTED">ActiveBox</a></div>
+							<div><a href="${path}index.html" id="SELECTED" class="COOLANIMATIONUp" data-text="ActiveBox">ActiveBox</a></div>
 							<div>	
-								<a href="html files/features.html">Features</a>
-								<a href="html files/works.html">Works</a>
-								<a href="html files/ourTeam.html">Our Team</a>
-								<a href="html files/testimonails.html">Testimonails</a>
-								<a href="html files/download.html">Download</a>
+								<a href="${path}html files/features.html" class="COOLANIMATIONUp" data-text="Features">Features</a>
+								<a href="${path}html files/works.html" class="COOLANIMATIONUp" data-text="Works">Works</a>
+								<a href="${path}html files/ourTeam.html" class="COOLANIMATIONUp" data-text="Our Team">Our Team</a>
+								<a href="${path}html files/testimonails.html" class="COOLANIMATIONUp" data-text="Testimonails">Testimonails</a>
+								<a href="${path}html files/download.html" class="COOLANIMATIONUp" data-text="Download">Download</a>
 							</div>
 						</div>
 					</div>`)

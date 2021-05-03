@@ -28,11 +28,12 @@ $(".SHADOW").on("click", ()=>{
 
 
 ///add events on color
-const colors = ["yellow", "white", "blue", "black"]
+const colors = ["yellow", "#d6d6d6", "#5aadff", "#191919"]
 
 let allColors = $(".colors")
 
-let allElementsToChange = [$("pTextToCahngeProperties"), $("hTextToCahngeProperties"), $("bTextToCahngeProperties")]
+let allElementsToChange = [$(":header"), $("p"), $(".backgroundToChange")]
+
 
 for(let i = 0; i < allColors.length; i++){
   let par = $(`.changeColor${i}`)
@@ -45,9 +46,15 @@ for(let i = 0; i < allColors.length; i++){
       par.find(".selectedColor").removeClass("selectedColor")
       circle.addClass("selectedColor")
 
-      allElementsToChange[i].css({
-        color: colors[j]
-      })
+
+      if(i < 2)
+        allElementsToChange[i].css({
+          color: colors[j]
+        })
+      else
+        allElementsToChange[i].css({
+          backgroundColor: colors[j]
+        })
     })
   }
 }

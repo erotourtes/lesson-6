@@ -42,15 +42,16 @@ let path = "../"
 if(fileNameReady === "index.html")
 	path = ""
 
+let screensize = document.documentElement.clientWidth
 
 $(window).scroll(()=> {
   	let scrollHeight = document.querySelector("html").scrollTop
-	if (scrollHeight > 499) {
+	if (scrollHeight > 499 && screensize == $(window).width()) {
 		let el = $(".toChangeOnScroll")
 
 		let toAppend = $(`
-					<div class= "linkA" style = "position: fixed; top:0px; width:100%; height: 50px; background-image: url('img/bg.jpg')">
-						<div class="head" style = " position: relative; top:15px; width: 70%; margin: 0 auto">
+					<div class= "linkA" style = "position: fixed; top:0px; width:100%; height: 50px; background-image: url('img/bg.jpg');">
+						<div class="head" style = "display:flex; flex-wrap: wrap; position: relative; top:15px; width: 70%; margin: 0 auto">
 							<div><a href="${path}index.html" id="SELECTED" class="COOLANIMATIONUp" data-text="ActiveBox">ActiveBox</a></div>
 							<div>	
 								<a href="${path}html files/features.html" class="COOLANIMATIONUp" data-text="Features">Features</a>

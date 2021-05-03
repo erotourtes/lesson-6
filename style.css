@@ -40,7 +40,7 @@ body {
 }
 header {
 	width: 100%;
-	height: 500px;
+	min-height: 500px !important;
 	/*background-image: url(img/bg.jpg);*/
 }
 header a, .linkA a{
@@ -81,10 +81,6 @@ header a, .linkA a{
 
 /*----------------------------------------photos*/
 .ph {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-column-gap: 0px;
-    grid-row-gap: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

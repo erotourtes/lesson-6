@@ -104,7 +104,7 @@
 				</div>	
 			</header>
 
-			<div class="mainInfo">
+			<div class="mainInfo backgroundToChange">
 				<div class="header">
 					<div style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap;">
 						<div class="inMainInfoInfo">
@@ -150,7 +150,7 @@
 				</div>
 			</div>
 
-			<div class="photos">
+			<div class="photos backgroundToChange">
 				<div class="ph">
 					<img src="img/1.jpg">
 					<img src="img/2.jpg">
@@ -163,8 +163,8 @@
 				</div>
 			</div>
 
-			<div class="peoples">
-				<div class="header" style="display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 0px;grid-row-gap: 0px;">
+			<div class="peoples backgroundToChange">
+				<div class="header" style="display: flex; flex-direction: row; flex-wrap: wrap;">
 					<div style="color: #5a5aff" class="people">
 						<img src="img/peoples.jpg">
 						<h2>ullamco laboris</h2>
@@ -208,7 +208,7 @@
 				</div>
 			</div>
 
-			<div class="carusel">
+			<div class="carusel backgroundToChange">
 				<div class="photosCarusel">
 					<img id="caruselPhoto0" src="https://edsurge.imgix.net/uploads/post/image/12765/brain-1572039374.jpg?auto=compress%2Cformat&crop=true&h=405&w=1000">
 					<img id="caruselPhoto1" src="https://stoneforest.ru/wp-content/uploads/2019/10/brain-fitness.png">
@@ -277,7 +277,15 @@ $(function() {
  	});
 });
 
-$("#mainBtn").click(()=> {$('body,html').animate({scrollTop:2100},500)})
+let h = 2100
+let h1 = document.body.scrollHeight- 800
+
+$(window).resize(()=>{
+	h1 = document.body.scrollHeight - 800
+})
+
+
+$("#mainBtn").click(()=> {$('body,html').animate({scrollTop:h1	},500)})
  
 </script>
 </body>

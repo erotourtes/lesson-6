@@ -1,4 +1,8 @@
 /*----------------------------------------header*/
+h3 {
+	font: 15pt Helvetica; 
+}
+
 header {
 	width: 100%;
 	min-height: 500px;

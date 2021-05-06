@@ -9,7 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="../styles/features.css">
 	<link rel="stylesheet" type="text/css" href="../coolaAnimation.css">
 </head>
-<DIV ID = "toTop" > ^ up </DIV >	
 <body>
 		<div class="container">
 			<header>
@@ -58,7 +57,7 @@
 							<h3>Elon Musk</h3>
 						</div>
 						<div class="InSponsored">
-							<img src="https://lh3.googleusercontent.com/proxy/U09wJ1WIHIgKVVUX_agwPK_JFBHGQbQ1E_oOp-WTqf3bMFWs-oqy3P2G6rH6uym-ttx9oPYLH4dsHhLsRFmldf4i7fbSnNNBX76TmEG8QyJLoF-MtYAzU4v_Rri-">
+							<img src="../img/billgates.jpg">
 							<h3>Bill Gates</h3>
 						</div>
 						<div class="InSponsored">
@@ -161,19 +160,7 @@
 		<script type="text/javascript" src="../script.js"></script>
 		
 <script type="text/javascript">
-	$(function() {
-		$(window).scroll(function() {
-	 		if($(this).scrollTop() != 0) {
-	 			$('#toTop').fadeIn();
-			} else {
-				$('#toTop').fadeOut();
-	 		}
-		});
- 
-		$('#toTop').click(function() {
-	 		$('body,html').animate({scrollTop:0},500);
-	 	});
-	});
+	
 
 	let deg = 0
 	let interval

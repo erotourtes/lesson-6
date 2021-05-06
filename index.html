@@ -12,22 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="signin menu/sgin.css">
 	<link rel="stylesheet" type="text/css" href="coolaAnimation.css">
 </head>
-<DIV ID = "toTop" > ^ up </DIV>
 <body>
-		<div id="logInPanel">
-			<div class="errMasages"><p></p></div>
-			<img src="img/geers.png" style="display: block; position: relative; right: 50px;">
-			<h1 style="position: relative; top: -150px; right: -50px;">greetings</h1>
-			<div style="position: relative; top: -150px;">
-				<input id="email" type="text" name="email" placeholder="email .com">
-				<input id="password" type="password" name="email" placeholder="password">
-			</div>
-			<a href="#" id="logbtn">Log in</a>	
-		</div>
-		<div class="shadow"></div>
-
-
-
 	<div class="menuBtn">
 		<div class="triangle-right"></div>
 	</div>
@@ -127,7 +112,7 @@
 						</div>
 					</div>
 
-					<div style="display: flex; flex-direction: row; justify-content: space-between;">
+					<div style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap;">
 						<div class="inMainInfoInfo">
 							<img class="inMainInfoImg" src="img/color-pencil.png">
 							<h3>EASILY CUSTOMIZED</h3>
@@ -208,6 +193,7 @@
 				</div>
 			</div>
 
+
 			<div class="carusel backgroundToChange">
 				<div class="photosCarusel">
 					<img id="caruselPhoto0" src="https://edsurge.imgix.net/uploads/post/image/12765/brain-1572039374.jpg?auto=compress%2Cformat&crop=true&h=405&w=1000">
@@ -263,20 +249,6 @@
  		<script type="text/javascript" src="menu/script.js"></script>
  		<script type="text/javascript" src="signin menu/sgin.js"></script>
 <script type="text/javascript">
-$(function() {
-	$(window).scroll(function() {
- 		if($(this).scrollTop() != 0) {
- 			$('#toTop').fadeIn();
-		} else {
-			$('#toTop').fadeOut();
- 		}
-	});
- 
-	$('#toTop').click(function() {
- 		$('body,html').animate({scrollTop:0},500);
- 	});
-});
-
 let h = 2100
 let h1 = document.body.scrollHeight- 800
 

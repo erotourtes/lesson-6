@@ -1,3 +1,18 @@
+$("html").append(`<DIV ID = "toTop" > ^ up </DIV >`)
+$(function() {
+		$(window).scroll(function() {
+	 		if($(this).scrollTop() != 0) {
+	 			$('#toTop').fadeIn();
+			} else {
+				$('#toTop').fadeOut();
+	 		}
+		});
+ 
+		$('#toTop').click(function() {
+	 		$('body,html').animate({scrollTop:0},500);
+	 	});
+});
+
 try {
 	ScrollReveal().reveal("footer div", {
 	    delay: 50,
@@ -41,6 +56,8 @@ fileNameReady = fileNameReady.split("").reverse().join("")
 let path = "../"
 if(fileNameReady === "index.html")
 	path = ""
+
+console.log(path)
 
 let screensize = document.documentElement.clientWidth
 

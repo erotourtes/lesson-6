@@ -1,20 +1,25 @@
-	const dots = $(".dots")
+for(let i = 0; i < $(".carusel").length; i++){
+
+	const dots = $(`.carusel${i} .dots`)
 	
-	const images = $(".photosCarusel").children()
+	const images = $(`.carusel${i} .photosCarusel`).children()
 
 	images.hide()
-	$("#caruselPhoto0").show()
+	$(`.carusel${i} #caruselPhoto0`).show()
 	
 	let indexPhoto = 0
-	let prevImg = $("#caruselPhoto0")
-	for(let i = 0; i < images.length; i++) {
+	let prevImg = $(`.carusel${i} #caruselPhoto0 `)
+
+
+	for(let j = 0; j < images.length; j++) {
 		let el = $("<div></div>");
-		if (i == indexPhoto)
+		if (j == indexPhoto)
 			el.addClass("selectedDot")
 		el.click(()=>{
-			$(`.photosCarusel img:nth-child(${indexPhoto + 1})`).slideUp("fast")
-			let curImg = $(`#caruselPhoto${i}`)
-			indexPhoto = i
+			$(`.carusel${i} .photosCarusel img:nth-child(${indexPhoto + 1})`).slideUp("fast")
+			let curImg = $(`.carusel${i} #caruselPhoto${j}`)
+
+			indexPhoto = j
 			
 			prevImg.fadeOut("fast")
 			curImg.fadeIn()
@@ -30,17 +35,19 @@
 	
 	setInterval(()=>{
 		//indexPhoto - current image
-		$(`#caruselPhoto${indexPhoto}`).slideUp("fast")
+		$(`.carusel${i} #caruselPhoto${indexPhoto}`).slideUp("fast")
 		
 		let next
 		if (indexPhoto + 1 >= images.length){
-			next = $(`#caruselPhoto${0}`)
+			next = $(`.carusel${i} #caruselPhoto${0}`)
 			indexPhoto = 0
 		} else
-			next = $(`#caruselPhoto${++indexPhoto}`)
+			next = $(`.carusel${i} #caruselPhoto${++indexPhoto}`)
 
 		next.fadeIn()
 
 		dots.children().removeClass("selectedDot")
-		$(`.dots div:nth-child(${indexPhoto + 1})`).addClass("selectedDot")
+		$(`.carusel${i} .dots div:nth-child(${indexPhoto + 1})`).addClass("selectedDot")
 	}, 5000)
+
+}

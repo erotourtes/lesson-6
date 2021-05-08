@@ -28,18 +28,22 @@ try {
 	console.log("have no SCROLLREVEAL " + e)
 }
 
+let changePhotoWH = ()=>{
+	try {
+		let a = document.querySelector(".ph")
+		let b = a.getElementsByTagName("*")
+		for(el of b)
+			el.style.width = window.innerWidth / 4 - 5 + "px"
 
-
-try {
-	let a = document.querySelector(".ph")
-	let b = a.getElementsByTagName("*")
-	for(el of b)
-		el.style.width = window.innerWidth / 4 - 5 + "px"
-
-		let all = document.querySelector("div")
-} catch(e) {
-	console.log(e)
+			let all = document.querySelector("div")
+	} catch(e) {
+		console.log(e)
+	}
 }
+changePhotoWH()
+$(window).on("resize", ()=>{
+	changePhotoWH()
+})
 
 let fileName = document.location.href
 let fileNameReady = ""
@@ -59,13 +63,13 @@ if(fileNameReady === "index.html")
 
 console.log(path)
 
-let screensize = document.documentElement.clientWidth
+let canAdd = true
 
 $(window).scroll(()=> {
   	let scrollHeight = document.querySelector("html").scrollTop
-	if (scrollHeight > 499 && screensize == $(window).width()) {
+	if (scrollHeight > 499 && canAdd && $(window).width() > 870) {
 		let el = $(".toChangeOnScroll")
-
+		canAdd = false
 		let toAppend = $(`
 					<div class= "linkA" style = "position: fixed; top:0px; width:100%; height: 50px; background-image: url('img/bg.jpg');">
 						<div class="head" style = "position: relative; top:15px; width: 70%; margin: 0 auto">
@@ -81,9 +85,14 @@ $(window).scroll(()=> {
 					</div>`)
 
 		$("body").append(toAppend)
-	} else if (scrollHeight < 45) {
+	} else if (scrollHeight < 45 || $(window).width() < 870) {
 		let el = $(".toChangeOnScroll")
-		$(".linkA").remove()
-		toChangeOnScroll = true
+		$(".linkA").animate({"top": "-500px"}, 500)
+		setTimeout(()=>{
+			$(".linkA").remove()
+			canAdd = true
+		}, 50)
+		
+		
 	}
 })

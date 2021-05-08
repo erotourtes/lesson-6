@@ -28,11 +28,115 @@
 				<div class="headInfo">
 						<h1 style="color: white;">Works</h1>
 						<h2 style="color: white;">╔3</h2>
-						<p style="color: white; margin-top: 50px;">WowWoWOwooWOWOWooo...</p>
+						<p style="color: white; margin-top: 50px;">Send a resume!</p>
 					</div>
 			</header>
 
 			<div class="content">
+				<div class="massage">
+					<h2 id="inMessage">Message</h2>
+					<div style="display: flex; flex-direction: row;">
+						<div class="peopleWithMessage"></div>
+						<div class="peopleSugestion"></div>
+					</div>
+				</div>
+
+
+				<div class="createResume">
+					<h3 id="nameT" style="font-size: 25pt;">Name</h3>
+					<div class="inCreateResume">
+						<div class="firstCol">
+							<h3>Info</h3>
+							<div>
+								<h4>Address</h4>
+								<h5 id="aT">none</h5>
+							</div>
+							<div>
+								<h4>Phone</h4>
+								<h5 id="pT">none</h5>
+							</div>
+							<div>
+								<h4>Email</h4>
+								<h5 id="eT">none</h5>
+							</div>
+
+
+							<h3>Skills</h3>
+							<div>
+								<h4>Physical</h4>
+								<div class="stats">
+									<div class="Physical"></div>
+								</div>
+							</div>
+							<div>
+								<h4>Moral</h4>
+								<div class="stats">
+									<div class="Moral"></div>
+								</div>
+							</div>
+							<div>
+								<h4>Conceptual</h4>
+								<div class="stats">
+									<div class="Conceptual"></div>
+								</div>
+							</div>
+						</div>
+						<div class="secondCol">
+							<div style="border-bottom: 2px solid  rgba(0,0,0, 0.2);">
+								<h3>Profile</h3>
+								<h5 id="profileT">None</h5>
+							</div>
+							<div>
+								<h3>Employment history</h3>
+								<h5 id="ehT">None</h5>
+							</div>
+							
+
+						</div>
+					</div>	
+				</div>
+
+				<div id="sendResume">
+					<h3>Send</h3>
+				</div>
+				
+				<div class="editResume">
+					<div>
+						<div>
+							<h3>Input your name</h3>
+							<input id="name" type="text" name="name">
+						</div>
+						<div>
+							<h3>Input your address</h3>
+							<input id="address" type="text" name="name">
+						</div>
+						<div>
+							<h3>Input your phone</h3>
+							<input id="phone" type="text" name="name">
+						</div>
+						<div>
+							<h3>Input your email</h3>
+							<input id="email" type="text" name="name">
+						</div>
+						<div>
+							<h3 id = "iStext">Input in percent your physical, moral and conceptual characteristics</h3>
+							<input id="iSp" type="range" min = "0" max="100" name="name">
+							<input id="iSm" type="range" min = "0" max="100" name="name">
+							<input id="iSc" type="range" min = "0" max="100" name="name">
+						</div>
+					</div>
+					<div>
+						<div>
+							<h3>Input your profile info</h3>
+							<textarea id="iP"></textarea>
+						</div>
+						<div>
+							<h3>Input your employnment history</h3>
+							<textarea id="iE"></textarea>
+						</div>
+					</div>
+				</div>
+
 			</div>
 
 			<footer>
@@ -103,6 +207,92 @@
 	}
 	
 	wave("h1", "h1")
+
+	//start resume
+
+	let canAddWidthIs = true
+	$(window).on("resize", ()=>{
+		if($(window).width() < 730 && canAddWidthIs) {
+			alert("width is too small")
+			canAddWidthIs = false
+		} else if ($(window).width() >= 730) {
+			canAddWidthIs = true
+		}
+	})
+
+	let n = "", a= "", p= "", e= "", iSp = 50, iSm = 50, iSc = 50, iP="", iE=""
+
+	let checkIfEnd = ()=>{
+		if(n.length <= 0 || a.length <= 0 || p.length <= 0 || e.length <= 0 || iP.length <= 0  || iE.length <= 0)
+			return
+
+		$("#nameT").text(n)
+		$("#aT").text(a)
+		$("#pT").text(p)
+		$("#eT").text(e)
+		$("#ehT").text(iE)
+		$("#profileT").text(iP)
+	}
+
+	$("#name").on("input", ()=>{
+		n = $("#name").val()
+		checkIfEnd()
+	})
+	$("#address").on("input", ()=>{
+		a = $("#address").val()
+		checkIfEnd()
+	})
+	$("#phone").on("input", ()=>{
+		p = $("#phone").val()
+		checkIfEnd()
+	})
+	$("#email").on("input", ()=>{
+		e = $("#email").val()
+		checkIfEnd()
+	})
+
+
+	$("#iSp").on("input", ()=>{
+		iSp = $("#iSp").val()
+
+		$(".Physical").css({
+			width: `${iSp}%`
+		})
+
+		$("#iStext").text(`Input in percent your physical(${iSp}), moral(${iSm}) and conceptual(${iSc}) characteristics`)
+	})
+	$("#iSm").on("input", ()=>{
+		iSm = $("#iSm").val()
+
+		$(".Moral").css({
+			width: `${iSm}%`
+		})
+
+		$("#iStext").text(`Input in percent your physical(${iSp}), moral(${iSm}) and conceptual(${iSc}) characteristics`)
+	})
+	$("#iSc").on("input", ()=>{
+		iSc = $("#iSc").val()
+
+		$(".Conceptual").css({
+			width: `${iSc}%`
+		})
+
+		$("#iStext").text(`Input in percent your physical(${iSp}), moral(${iSm}) and conceptual(${iSc}) characteristics`)
+	})
+
+
+	$("#iP").on("input", ()=>{
+		iP = $("#iP").val()
+		checkIfEnd()
+	})
+	$("#iE").on("input", ()=>{
+		iE = $("#iE").val()
+		checkIfEnd()
+
+		console.log(p, n, e, iP, iE)
+	})
+	
+
 </script>
 </body>
 </html>

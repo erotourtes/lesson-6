@@ -166,6 +166,7 @@ $(".shadow").on("click", ()=>{
 	$(".gears").fadeOut(400)
 	$(".signIn").hide()
 	$(".shadow").fadeOut(500)
+  $(".errMassage").hide()
 
 	$("body").css({overflow: "visible"})
 })

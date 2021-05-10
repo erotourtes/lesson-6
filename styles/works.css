@@ -1,28 +1,28 @@
-::-webkit-scrollbar {
+.peopleSugestion::-webkit-scrollbar {
 	display: block;
     width: 0.4em;
 }
 
-body::-webkit-scrollbar:window-inactive {
+.peopleSugestion::-webkit-scrollbar:window-inactive {
     width: 0.1em;
 }
  
-body::-webkit-scrollbar-track {
+.peopleSugestion::-webkit-scrollbar-track {
     background-color: #8000ff;
     border-radius: 2em;
 }
  
-body::-webkit-scrollbar-thumb {
+.peopleSugestion::-webkit-scrollbar-thumb {
   	background-color: #0080ff;
   	border-radius: 2em;
 }
 
 
 
-body::-webkit-scrollbar-track:hover { 
+.peopleSugestion::-webkit-scrollbar-track:hover { 
     background-color: #0080ff;
 }
-body::-webkit-scrollbar-thumb:hover { 
+.peopleSugestion::-webkit-scrollbar-thumb:hover { 
   	background-color: #ffff00; 
 }
 
@@ -52,11 +52,15 @@ h1 {
 	padding: 0px 50px 0px 50px;
 	box-sizing: border-box;
 	text-align: center;
+
+	position: relative;
 }
 
 #inMessage {
 	color: white;
 	position: relative;
+	display: block;
+	padding: 20px;
 }
 #inMessage:before, #inMessage:after  {
 	content: "";
@@ -70,13 +74,14 @@ h1 {
 	transform: scaleX(.5);
 	object-position: 0% 100%;
 
+
 	transition-duration: .5s;
 }
 #inMessage:before {
-	top: -10px;
+	top: 0px;
 }
 #inMessage:after {
-	top: 30px;
+	top: 55px;
 }
 #inMessage:hover:before {
 	transform: scaleX(1);
@@ -99,17 +104,47 @@ h1 {
 
 .peopleWithMessage {
 	width: 50px;
-	height: 500px;
-	background-color: red;
-}
-.peopleSugestion {
-	width: 100%;
-	height: 500px;
-	background-color: green;
+	height: 700px;
+	border-radius: 2em;
+	border: 2px solid white;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	overflow: scroll;
 }
+.peopleSugestion {
+	width: 100%;
+	height: 700px;
+	background-image: url(../img/table.png);
 
+	overflow: scroll;
+
+
+	display: inline-block;
+}
+.ballToFindResume {
+	width: 45px;
+	height: 45px;
+	background-color: orange;
+	border-radius: 50%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: white;
+
+	margin-bottom: 20px;
+
+	transition-duration: .5s
+}
+.ballToFindResume:hover {
+	background-color: #ffb734;
+	color: black;
+	transition-duration: .5s;
+}
 
 
 .createResume {
@@ -121,6 +156,9 @@ h1 {
 	padding: 100px 50px 100px 50px;
 	margin-bottom: 20px;
 	box-sizing: border-box;
+
+	transform-origin: 50% 0;
+
 }
 .createResume h3 {
 	position: relative;
@@ -199,7 +237,7 @@ h3,h4,h5,h2 {
 	box-sizing: border-box;
 }
 
-#sendResume {
+#sendResume, #showTemplate, .clearAll {
 	width: 100%;
 	height: 50px;
 	border-radius: 2em;
@@ -214,7 +252,15 @@ h3,h4,h5,h2 {
 	
 	transition-duration: .5s;
 }
-#sendResume:hover {
+#showTemplate {
+	background-color: #33ff51;
+	color: black;
+}
+#showTemplate:hover {
+	background-color: #00e622 !important;
+	color: white  !important;
+}
+#sendResume:hover, #showTemplate:hover {
 	background-color: #ffb734;
 	color: black;
 	transition-duration: .5s
@@ -235,6 +281,8 @@ h3,h4,h5,h2 {
 	color: white;
 
 	margin-bottom: 20px;
+
+	overflow: hidden;
 }
 .editResume div {
 	margin-bottom: 50px;
@@ -268,22 +316,46 @@ textarea {
 	border-radius: 2em;
 
 	overflow: hidden;
+
+	position: relative;
 }
 .Physical {
 	display: inline-block;
 	height: 100%;
 	width: 0%;
 	background-color: #4e4eff;
+
+	position: absolute;
+	left: 0px;
 }
 .Moral {
 	display: inline-block;
 	height: 100%;
 	width: 0%;
 	background-color: #4ea7ff;
+
+	position: absolute;
+	left: 0px;
 }
 .Conceptual {
 	display: inline-block;
 	height: 100%;
 	width: 0%;
 	background-color: #a74eff;
+
+	position: absolute;
+	left: 0px;
+}
+
+.templateResume {
+	position: absolute;
+	left: 350px;
+
+	transform: 
+		scale(.5)
+		translate(-75%, -50%);
+
+	cursor: move;
+
+	transition: .2s;
 }

@@ -58,6 +58,7 @@ let deg = 0
 				let ballInfo = $(`<div class="ballInfo">
 					<img src="${link[i][key]}">
 				</div>`)
+
 				ballInfo.hide()
 				$(".INFOTOAPPEND").append(ballInfo)
 				ballInfo.fadeIn()
@@ -67,12 +68,16 @@ let deg = 0
 			let num = 3;
 			let radius = 150;
 
+			let width = $(InSponsored[i]).position()
 
-		  	for (let i=0; i<num; i++){
-		        let f = 45 / 57.2958 * i
-		        let left = -radius * Math.sin(f) + 100 + 'px';
-		        var top = -radius * Math.cos(f) + 'px';
-		        $('.ballInfo').eq(i).css({'top':top,'left':left});
+			
+
+		  	for (let j=0; j<num; j++){
+		        let f = 45 / 57.2958 * j
+		        let left = -radius * Math.sin(f) 
+		        let top = -radius * Math.cos(f) 
+				
+		        $('.ballInfo').eq(j).css({'top':top,'left': `${left + width.left - 50}px` });
 		  	}
 		})
 	}

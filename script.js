@@ -71,7 +71,7 @@ $(window).scroll(()=> {
 		let el = $(".toChangeOnScroll")
 		canAdd = false
 		let toAppend = $(`
-					<div class= "linkA" style = "z-index:100; position: fixed; top:0px; width:100%; height: 50px; background-image: url('img/bg.jpg');">
+					<div class= "linkA" style = "z-index:89; position: fixed; top:0px; width:100%; height: 50px; background-image: url('img/bg.jpg');">
 						<div class="head" style = "position: relative; top:15px; width: 70%; margin: 0 auto">
 							<div><a href="${path}index.html" id="SELECTED" class="COOLANIMATIONUp" data-text="ActiveBox">ActiveBox</a></div>
 							<div>	

@@ -1,6 +1,3 @@
-body {
-	height: 1000px
-}
 .menuBtn{
 	position: fixed;
 	top: 50%;
@@ -28,7 +25,7 @@ body {
 	border-radius: 0em 1em 1em 0em;
 	background-color: #6980fe;
 
-	z-index: 50;
+	z-index: 90;
 	text-align: center;
 }
 

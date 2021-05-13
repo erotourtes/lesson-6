@@ -359,3 +359,63 @@ textarea {
 
 	transition: .2s;
 }
+
+
+/*figures*/
+
+.triangle {
+	width: 200px;
+	height: 200px;
+
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+	position: absolute;
+}
+.circle {
+	width: 200px;
+	height: 200px;
+
+	border-radius: 50%;
+
+	position: absolute;
+}
+
+.square {
+	width: 200px;
+	height: 200px;
+
+	position: absolute;
+}
+
+.pentagon {
+	width: 200px;
+	height: 200px;
+
+	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+
+	position: absolute;
+}
+
+
+.hexagon {
+   	width: 200px;
+	height: 200px;
+
+  	clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
+  	position: absolute;
+}
+
+.octagon {
+	width: 200px;
+	height: 200px;
+
+	clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+
+  	position: absolute;
+}
+
+.octagon , .hexagon, .pentagon, .square, .circle, .triangle {
+	opacity: 0.5;
+	z-index: -1;
+}

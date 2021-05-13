@@ -271,3 +271,14 @@ let textindex = 0
     	
 	})
 	
+
+
+//FIGURES
+let wC = $(".content").outerWidth()
+let hC = $(".content").outerWidth()
+
+let number = wC * hC * 0.3 / (200 * 200)
+
+for(let i = 0; i < number; i++) {
+  new Figure(i)
+}

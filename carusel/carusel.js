@@ -28,7 +28,7 @@ for(let i = 0; i < $(".carusel").length; i++){
 			$(`.carusel${i} .dots div:nth-child(${indexPhoto + 1})`).addClass("selectedDot")
 		}
 		let caruselInterval = setInterval(caruselFunction, 5000)
-
+	let ifCanAddTimer = true
 	for(let j = 0; j < images.length; j++) {
 		let el = $("<div></div>");
 		if (j == indexPhoto)
@@ -36,8 +36,6 @@ for(let i = 0; i < $(".carusel").length; i++){
 
 
 		
-
-
 		el.click(()=>{
 			clearInterval(caruselInterval)
 
@@ -54,9 +52,14 @@ for(let i = 0; i < $(".carusel").length; i++){
 			dots.children().removeClass("selectedDot")
 			el.addClass("selectedDot")
 
-			setTimeout(()=>{
-				caruselInterval = setInterval(caruselFunction, 5000)
-			}, 3000)
+			if(ifCanAddTimer) {
+				setTimeout(()=>{
+					caruselInterval = setInterval(caruselFunction, 5000)
+					ifCanAddTimer = true
+				}, 3000)	
+			}
+
+			ifCanAddTimer = false
 		})
 		dots.append(el)
 	}

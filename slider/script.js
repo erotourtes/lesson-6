@@ -90,16 +90,4 @@ $('.sliderLeftRight').each(function(index) {
       }
     })
 
-    $(this).find(".btnLeft").fadeOut()
-    $('.sliderLeftRight').hover(()=>{
-      $(this).find(".btnLeft").fadeIn()
-    }, ()=>{
-      $(this).find(".btnLeft").fadeOut()
-    })
-    $(this).find(".btnRight").fadeOut()
-    $('.sliderLeftRight').hover(()=>{
-      $(this).find(".btnRight").fadeIn()
-    }, ()=>{
-      $(this).find(".btnRight").fadeOut()
-    })
 })

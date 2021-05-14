@@ -1,0 +1,165 @@
+/*<div class="buttonHexagonAnimation">
+		<span>Home</span>
+		<p>Home</p>
+	</div>
+	<div class="buttonHexagonAnimation buttonHexagonAnimationLeft">
+		<span><a href="#">click</a></span>
+		<p>Home</p>
+	</div>*/
+
+
+
+
+.buttonHexagonAnimation {
+	position: relative;
+	top: 0;
+	left: 0;
+
+	width: 200px;
+	height: 200px;
+
+	/*border: 1px solid black;*/
+
+	font-family: Impact, 'Arial Narrow Bold', sans-serif;
+	text-transform: capitalize;
+
+	margin-top: 50px;
+	margin-left: 50px;
+}
+.buttonHexagonAnimation p {
+	position: absolute;	
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -130%) rotate(0);
+	z-index: 10;
+
+	text-align: center;
+	font-size: 40px;
+	color: white;
+
+	transition:  .3s cubic-bezier(0, 2.17, .83, 1.36) .3s;
+}
+.buttonHexagonAnimation:hover p {
+	transform: translate(-50%, -50%) rotate(-27deg);
+	font-size: 0;
+	opacity: 0;
+
+	transition:  .2s;
+}
+
+
+
+
+
+
+
+.buttonHexagonAnimation:before {
+	content:  "";
+	width: 200px;
+	height: 200px;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	/*clip-path: polygon(0 25%, 50% 0, 50% 100%, 0 75%);*/clip-path: polygon(30% 0%, 50% 0, 50% 100%, 30% 100%, 0% 70%, 0% 30%);
+	transition: clip-path .2s, width .2s .2s, left .2s .2s;
+}
+.buttonHexagonAnimation:after {
+	content:  "";
+	width: 200px;
+	height: 200px;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: -1px;
+
+	/*clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%);*/clip-path: polygon(50% 0, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 50% 100%);
+	transition: clip-path .2s .5s, width .2s .2s, left .2s .2s;
+}
+/*.buttonHexagonAnimation:hover:before {
+	width: 50px;
+	left: 100px;
+
+	transition: clip-path .2s , width .2s .2s, left .2s .2s;
+	clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+.buttonHexagonAnimation:hover:after {
+	width: 0px;
+	left: 100px;
+
+	transition: clip-path .2s , width .2s .2s, left .2s .2s;
+	clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}*/
+.buttonHexagonAnimation:hover:before {
+	width: 50px;
+	left: 100px;
+
+	transition: clip-path .2s , width .2s .2s, left .2s .2s;
+	clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+.buttonHexagonAnimation:hover:after {
+	width: 0px;
+	left: 100px;
+
+	transition: clip-path .2s , width .2s .2s, left .2s .2s;
+	clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+
+
+
+
+.buttonHexagonAnimation span {
+	font-size: 252px;
+
+	position: absolute;
+	right: 100px;
+
+	height: 200px;
+	/*display: block;*/
+	line-height: 200px;
+	transform: rotateY(90deg);
+
+	transform-origin: right;
+	transition: .5s;
+	overflow: hidden;
+}
+.buttonHexagonAnimation:hover span {
+	/*width: auto;*/
+	transition: .5s .2s;
+	transform: rotateY(0deg);
+}
+.buttonHexagonAnimationLeft span {
+	left: 100px;
+	right: auto;
+	transform-origin: left;
+}
+
+
+.buttonHexagonAnimationLeft:hover:after {
+	width: 0;
+	left: 49px;
+
+	transition: clip-path .2s .5s, width .2s .2s, left .2s .2s;
+	clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+.buttonHexagonAnimationLeft:hover:before {
+	width: 50px;
+	left: 50px;
+
+	transition: clip-path .2s , width .2s .2s, left .2s .2s;
+	clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+
+span a {
+	color: black;
+
+	transition:  .2s .5s;
+}
+span:hover a {
+	color: orange;
+	transition:  .2s .2s;
+}

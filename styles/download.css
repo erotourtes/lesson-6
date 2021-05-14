@@ -1,91 +1,54 @@
-/*#logInPanel{
-	display: flex;
-	opacity: 0;
-	width: 500px;
-	height: 500px;
-
-	position: absolute;
-	top: 75px;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-	z-index: 100;
-
-	
-	flex-direction: column;
-	border-radius: 2em;
-	border: 2px solid white;
-
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-	background-size: 400% 400%;
-	animation: change 5s ease-in-out infinite;
-
-}
-h1 {
-	color: #fff;
-	display: block;
-	margin: 0 auto;
-	text-transform:uppercase;
-	padding: 50px;
-}
-input {
-	margin: auto;
-  	display: block;
-	background: transparent;
-  	border: none;
- 	border-bottom: 1px solid #fff;
-  	color: #fff;
-  	font-family: 'Caveat', sans-serif;
-  	font-size: 20px;
-  	letter-spacing: 1px;
-  	outline: none;
-  	width: 300px;
-  	height: 50px;
-}
-::-webkit-input-placeholder { text-align:right; }
-::placeholder {
-  color: white;
-}
-
-#logbtn {
+.gridContainer {
 	position: relative;
-	top: -75px;
-	width: 150px;
-	height: 100px;
-	margin: auto;
-	border-radius: 2em;
+	max-width: 100%;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-rows: minmax(100px, auto);
+
+	margin: 40px;
+
+	grid-auto-flow: dense;
+	grid-gap: 10px;
+}
+
+.gridContainer .gridBox {
+	color: white;
+	background-color: rgba(0,0,0,.5);
+
+	display: grid;
+	font-size: 20px;
+
+	place-items: center;
 	text-align: center;
-	color: white;
-	border: 2px solid #fff;
+
+	transition: .5s;
 }
-#logbtn:hover {
-	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+.gridContainer .gridBox:hover {
+	background-color: rgba(0,0,0,.7);
 }
 
-.shadow {
-	position: absolute;
-	z-index: 99;
-	width: 100%;
-	height: 100%;
-	
-	background: rgba(0,0,0,.5);
-}
-#dwlink {
-	transition-property: background-color, border-radius, color;
-}
-#dwlink:hover {
-	color: white;
+.gridContainer .gridBox img	{
+	position: relative;
+	max-width: 100px;
+	margin-bottom: 10px;
 }
 
-@keyframes change {
-	0%{
-		background-position: 0 50%;
-	}
-	50%{
-		background-position: 100% 50%;
-	}
-	100%{
-		background-position: 0 50%;
-	}
+
+.gridContainer .gridBox:nth-child(1){
+	grid-column: span 2;
+	grid-row: span 2;
 }
-*/
+
+
+@media (max-width: 991px) {
+	.gridContainer {
+		grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+		grid-template-rows: minmax(auto, auto);
+	}
+	.gridContainer .gridBox {
+		grid-column: unset !important;
+		grid-row: unset !important;
+	}
+
+}

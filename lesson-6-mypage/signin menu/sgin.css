@@ -1,0 +1,157 @@
+.signIn p {
+	font-size: 13pt;
+}
+
+.signIn {
+	width: 550px !important;
+	height: 550px !important;
+	background-color: white;
+	text-align: center;
+	z-index: 93;
+
+	border-radius: 1em;
+	padding: 50px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, -50%); 
+
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.signIn * {
+	padding: 0px;
+	margin: 10px;
+}
+
+.signIn h3:nth-child(1) {
+	font-size: 25pt;
+	margin-bottom: 50px;
+}
+.inSignIn h3 {
+	font-size: 15pt !important;
+	margin: 10px !important;
+}
+.inSignIn {
+	text-align: left;
+}
+.inSignIn *:nth-child(2n){
+	margin-bottom: 50px;
+}
+
+input {
+  	display: block;
+	background: transparent;
+ 	border: 1px solid black;
+ 	border-radius: 1em;
+  	color: black;
+  	font-family: 'Caveat', sans-serif;
+  	font-size: 20px;
+  	letter-spacing: 1px;
+  	outline: none;
+  	width: 100%;
+  	height: 45px;
+}
+#rememberMe {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	top: -40px;
+	left: 310px;
+}
+#rememberMe input {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+#signInBtn {
+	text-align: center;
+	color: white;
+	width: 100%;
+	background-color: #0080FE;	
+	padding: 10px 0px;
+	position: relative;
+	top: -60px;
+	transition: .5s ease;
+}
+#ForgotPassword{
+	color: #CA002A;
+	transition: .5s ease;
+}
+#CreateOne {
+	color: #50CA78;
+	transition: .5s ease;
+}
+
+#CreateOne:hover, #ForgotPassword:hover, #signInBtn {
+	cursor: pointer;
+	font-size: 20pt;
+	transition: .5s ease;
+}
+#signInBtn:hover {
+	background-color: #0059b2;
+	transition: .5s ease;
+}
+
+::placeholder{
+	position: relative;
+	left: 10px;
+}
+
+
+
+.gears {
+	position: absolute;
+	top: -10%;
+	left: 10%;
+	z-index: 91;
+
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+}
+.gear1 img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.gear2 img {
+	position: absolute;
+	top: 100px;
+	left: 260px;
+}
+.gear3 img {
+	position: absolute;
+	top: 280px;
+	left: 140px;
+}
+
+.shadow {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+
+	z-index: 90;
+	width: 100%;
+	height: 100%;
+	
+	background: rgba(0,0,0,.4);
+
+	 z-index: 92;
+}
+
+.errMassage {
+	padding: 50px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	border-radius: 1em;
+
+	position: absolute;
+	top: 30%;
+	left: 80%;
+	transform:translate(-50%, -50%); 
+	z-index: 100;
+
+	background-color: white;
+}

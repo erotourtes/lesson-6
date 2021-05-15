@@ -1,0 +1,421 @@
+.peopleSugestion::-webkit-scrollbar {
+	display: block;
+    width: 0.4em;
+}
+
+.peopleSugestion::-webkit-scrollbar:window-inactive {
+    width: 0.1em;
+}
+ 
+.peopleSugestion::-webkit-scrollbar-track {
+    background-color: #8000ff;
+    border-radius: 2em;
+}
+ 
+.peopleSugestion::-webkit-scrollbar-thumb {
+  	background-color: #0080ff;
+  	border-radius: 2em;
+}
+
+
+
+.peopleSugestion::-webkit-scrollbar-track:hover { 
+    background-color: #0080ff;
+}
+.peopleSugestion::-webkit-scrollbar-thumb:hover { 
+  	background-color: #ffff00; 
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.text {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+h1 {
+  	color: white;
+	position: relative;
+}
+.massage {
+	width: 100%;
+	min-height: 500px;
+	border: 2px solid rgba(255,255,255, 0.2);
+	margin-top: 50px;
+	margin-bottom: 20px;
+	padding: 0px 50px 0px 50px;
+	box-sizing: border-box;
+	text-align: center;
+
+	position: relative;
+}
+
+#inMessage {
+	color: white;
+	position: relative;
+	display: block;
+	padding: 20px;
+}
+#inMessage:before, #inMessage:after  {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 5px;
+	background-color: rgba(255,255,255, 0.5);
+
+	transform: scaleX(.5);
+	object-position: 0% 100%;
+
+
+	transition-duration: .5s;
+}
+#inMessage:before {
+	top: 0px;
+}
+#inMessage:after {
+	top: 55px;
+}
+#inMessage:hover:before {
+	transform: scaleX(1);
+	object-position: 100% 100%;
+	background-color: rgba(255,255,255, 0.7);
+
+	transition-duration: .5s;
+}
+
+#inMessage:hover:after {
+	transform: scaleX(1);
+	object-position: 100% 0%;
+	background-color: rgba(255,255,255, 0.7);
+
+	transition-duration: .5s;
+}
+
+
+
+
+.peopleWithMessage {
+	width: 50px;
+	height: 700px;
+	border-radius: 2em;
+	border: 2px solid white;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	overflow: scroll;
+}
+.peopleSugestion {
+	width: 100%;
+	height: 700px;
+	background-image: url(../img/table.png);
+
+	overflow: scroll;
+
+
+	display: inline-block;
+}
+.ballToFindResume {
+	width: 45px;
+	height: 45px;
+	background-color: orange;
+	border-radius: 50%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: white;
+
+	margin-bottom: 20px;
+
+	transition-duration: .5s
+}
+.ballToFindResume:hover {
+	background-color: #ffb734;
+	color: black;
+	transition-duration: .5s;
+}
+
+
+.createResume {
+	width: 100%;
+	
+	background-color: white;
+	border-radius: 1em;
+
+	padding: 100px 50px 100px 50px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+
+	transform-origin: 50% 0;
+
+}
+.createResume h3 {
+	position: relative;
+	font-size: 20pt;
+	text-transform: uppercase;
+	font-family: courier;
+	font-weight: bolder;
+	letter-spacing: 5px;
+}
+.createResume h4 {
+	position: relative;
+	font-size: 15pt;
+	text-transform: uppercase;
+	font-family: courier;
+	font-weight: bolder;
+}
+.createResume h5 {
+	position: relative;
+	font-size: 15pt;
+	font-family: courier;
+	font-weight: unset;
+
+	top: -20px;
+}
+
+.createResume h3:after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	top: 35px;
+	width: 40px;
+	height: 5px;
+	background-color: rgba(0,0,0, 0.5);
+
+	transition-duration: .5s;
+}
+.createResume div div:hover h3:after {
+	width: 70px;
+	height: 5px;
+	background-color: rgba(0,0,0, 0.8);
+
+	transition-duration: .5s;
+}
+
+
+h3,h4,h5,h2 {
+	overflow: hidden;
+}
+
+
+.inCreateResume {
+	border-top: 2px solid  rgba(0,0,0, 0.2);
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: row;
+
+	box-sizing: border-box;
+}
+.firstCol {
+	width: 30%;
+	height: 100%;
+	
+	border-right: 2px solid  rgba(0,0,0, 0.2);
+}
+.firstCol div {
+	margin-bottom: 10px;
+}
+.secondCol {
+	width: 70%;
+	height: 100%;
+
+	padding: 0 0 0 50px;
+	box-sizing: border-box;
+}
+
+#sendResume, #showTemplate, .clearAll {
+	width: 100%;
+	height: 50px;
+	border-radius: 2em;
+	background-color: orange;
+	color: white;
+
+	margin-bottom: 20px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	transition-duration: .5s;
+}
+#showTemplate {
+	background-color: #33ff51;
+	color: black;
+}
+#showTemplate:hover {
+	background-color: #00e622 !important;
+	color: white  !important;
+}
+#sendResume:hover, #showTemplate:hover {
+	background-color: #ffb734;
+	color: black;
+	transition-duration: .5s
+}
+
+.editResume {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border-radius: 1em;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+	background-color: #0d0d0d;
+	color: white;
+
+	margin-bottom: 20px;
+
+	overflow: hidden;
+}
+.editResume div {
+	margin-bottom: 50px;
+}
+input {
+  	display: block;
+	background: transparent;
+ 	border: 1px solid white;
+ 	border-radius: 1em;
+  	color: white;
+  	font-family: 'Caveat', sans-serif;
+  	font-size: 20px;
+  	letter-spacing: 1px;
+  	outline: none;
+  	width: 600px;
+  	height: 45px;
+}
+textarea {
+	background-color: transparent;
+	color:  white;
+	border-radius: 2em;
+	padding: 20px;
+	width: 500px;
+	height: 100px;
+}
+
+.stats {
+	width: 100%;
+	height: 20px;
+	background-color: #9a9aff;
+	border-radius: 2em;
+
+	overflow: hidden;
+
+	position: relative;
+}
+.Physical {
+	display: inline-block;
+	height: 100%;
+	width: 0%;
+	background-color: #4e4eff;
+
+	position: absolute;
+	left: 0px;
+}
+.Moral {
+	display: inline-block;
+	height: 100%;
+	width: 0%;
+	background-color: #4ea7ff;
+
+	position: absolute;
+	left: 0px;
+}
+.Conceptual {
+	display: inline-block;
+	height: 100%;
+	width: 0%;
+	background-color: #a74eff;
+
+	position: absolute;
+	left: 0px;
+}
+
+.templateResume {
+	position: absolute;
+	left: 350px;
+
+	transform: 
+		scale(.5)
+		translate(-75%, -50%);
+
+	cursor: move;
+
+	transition: .2s;
+}
+
+
+/*figures*/
+
+.triangle {
+	width: 200px;
+	height: 200px;
+
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+	position: absolute;
+}
+.circle {
+	width: 200px;
+	height: 200px;
+
+	border-radius: 50%;
+
+	position: absolute;
+}
+
+.square {
+	width: 200px;
+	height: 200px;
+
+	position: absolute;
+}
+
+.pentagon {
+	width: 200px;
+	height: 200px;
+
+	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+
+	position: absolute;
+}
+
+
+.hexagon {
+   	width: 200px;
+	height: 200px;
+
+  	clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
+  	position: absolute;
+}
+
+.octagon {
+	width: 200px;
+	height: 200px;
+
+	clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+
+  	position: absolute;
+}
+
+.octagon , .hexagon, .pentagon, .square, .circle, .triangle {
+	opacity: 0.5;
+	z-index: -1;
+}

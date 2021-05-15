@@ -1,0 +1,62 @@
+	.carusel {
+		width: 100%;
+		height: 500px;
+		display: flex;
+		flex-direction: row;
+		overflow: scroll;
+	}
+
+	.photosCarusel{
+		width: 50%;
+		height: 100%;
+		margin: auto auto;
+
+		position: relative;
+   		overflow: hidden;
+	}
+	.photosCarusel img {
+		margin: 50px;
+		width: 90%;
+		height: 400px;
+   		object-fit:cover;
+   		position: absolute;
+	}
+	.textCarusel{
+		width: 50%;
+		height: 100%;
+	}
+	.mainTextCarusel {
+		color: white;
+		text-align: left;
+		width: 75%;
+		margin: 50px 0px 0px 50px;
+		font: 25px white  serif;
+	}
+	.notMainTextCarusel {
+		color: #5a5aff;
+		text-align: center;
+		width: 75%;
+		margin: 10px 0px 0px 50px;
+		font: 15px #5a5aff  serif;
+	}
+	.dots {
+		margin: 0px 0px 0px 50px;
+		display: flex;
+		flex-direction: row;
+	}
+	.dots div {
+		transition-duration: .3s;
+		width: 20px;
+		height: 20px;
+		background-color: grey;
+		border-radius: 50%;
+		margin: 50px 0px 0px 10px;
+	}
+	.dots div:hover {
+		transition-duration: .3s;
+		background-color: white;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	}
+	.selectedDot {
+		background-color: white !important;
+	}

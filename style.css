@@ -156,3 +156,17 @@ footer {
 	height: 25px;
 	margin: 20px; 
 }
+
+
+
+
+
+
+@media (max-width: 500px) {
+	.head div:nth-child(1) {
+		margin: 0 auto;
+	}
+	.head div:nth-child(2) {
+		display: none;
+	}
+}

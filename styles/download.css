@@ -1,6 +1,34 @@
+#maunButtonsInDownload {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	position: relative;
+}
+
+#maunButtonsInDownload div:nth-child(1) {
+	position: relative;
+	margin: 0 auto;
+	top: 20px;
+	left: -1%;
+}
+#maunButtonsInDownload div:nth-child(2) {
+	position: relative;
+	margin: 0 auto;
+	left: 10%;
+}
+#maunButtonsInDownload div:nth-child(3) {
+	position: relative;
+	margin: 0 auto;
+	left: -2%;
+}
+
+
+/*
+grid*/
 .gridContainer {
 	position: relative;
-	max-width: 100%;
+	/*max-width: 100%;*/
 
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -8,7 +36,7 @@
 
 	margin: 40px;
 
-	grid-auto-flow: dense;
+	/*grid-auto-flow: dense;*/
 	grid-gap: 10px;
 }
 
@@ -26,8 +54,8 @@
 }
 .gridContainer .gridBox:hover {
 	background-color: rgba(0,0,0,.7);
+	transition: .1s .1s;
 }
-
 .gridContainer .gridBox img	{
 	position: relative;
 	max-width: 100px;
@@ -36,11 +64,34 @@
 
 
 .gridContainer .gridBox:nth-child(1){
-	grid-column: span 2;
+	grid-column: span 3;
 	grid-row: span 2;
 }
+.gridContainer .gridBox:nth-child(4){
+	grid-column: span 1;
+	grid-row: span 2;
+}
+.gridContainer .gridBox:nth-child(4):hover{
+	background-color: orange;
+	color: black;
+	transition: background-color 1s;
+}
+.gridContainer .gridBox:nth-child(5){
+	grid-column: span 1	;
+	grid-row: span 2;
+}
+.gridContainer .gridBox:nth-child(6){
+	grid-column: span 2;
+	grid-row: span 1;
+}
+.octagon {
+	width: 200px;
+	height: 200px;
 
+	clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 
+  	position: absolute;
+}
 @media (max-width: 991px) {
 	.gridContainer {
 		grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
@@ -52,3 +103,6 @@
 	}
 
 }
+
+
+

@@ -1,0 +1,11 @@
+.main {
+	display: flex;
+	flex-direction: column;
+}
+.image {
+	width: 50px;
+}
+p {
+	color: red;
+}
+@media screen 

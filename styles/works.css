@@ -419,3 +419,10 @@ textarea {
 	opacity: 0.5;
 	z-index: -1;
 }
+
+@media (max-width: 991px) {
+	input, textarea {
+		width: 100%;
+	}
+
+}

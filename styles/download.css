@@ -22,8 +22,89 @@
 	margin: 0 auto;
 	left: -2%;
 }
+/*paralax*/
 
+/*header {
+	background: none;
+	overflow: hidden;
+}
+section {
+	height: 100vh;
+	background: none;
+	overflow: hidden;
 
+	position: static;
+	top: 0;
+	left: 0;
+	background-attachment: fixed;
+}
+
+section img {
+	position: absolute;
+	bottom: -100px;
+	left: 0px;
+	width: 70%;
+
+	object-fit: cover;
+}
+.textCenterParalax {
+	position: absolute;
+	bottom: -100%;
+	left: 50%;
+}
+.stars {
+	z-index: -2;
+	width: 100%;
+	height: 200%;
+}
+.mountain1 {
+	z-index: -1;
+
+	left: 50%;
+	bottom: -200px;
+}
+.mountain2 {
+	z-index: -1;
+
+	left: 25%;
+	bottom: -200px;
+}
+.mountain3 {
+	z-index: -1;
+
+	left: 0%;
+	bottom: -200px;
+}
+.mountain4 {
+	z-index: -1;
+
+	left: -20%;
+	bottom: -200px;
+}
+.mountain5 {
+	z-index: -1;
+
+	left: 75%;
+	bottom: -150px;
+}
+
+.bird1 {
+	width: 150px;
+
+	bottom: 550px;
+	left: 50px;
+}
+.bird2 {
+	width: 150px;
+	bottom: 250px;
+	left: 850px;
+}
+.bird3 {
+	width: 150px;
+
+	bottom: 250px;
+	left: 150px;
+}*/
 /*
 grid*/
 .gridContainer {

@@ -1,3 +1,6 @@
+body {
+	overflow-x: hidden !important;
+}
 .peopleSugestion::-webkit-scrollbar {
 	display: block;
     width: 0.4em;

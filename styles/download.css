@@ -10,101 +10,18 @@
 	position: relative;
 	margin: 0 auto;
 	top: 20px;
-	left: -1%;
 }
 #maunButtonsInDownload div:nth-child(2) {
 	position: relative;
 	margin: 0 auto;
-	left: 10%;
+	left: 170px;
 }
 #maunButtonsInDownload div:nth-child(3) {
 	position: relative;
 	margin: 0 auto;
-	left: -2%;
-}
-/*paralax*/
-
-/*header {
-	background: none;
-	overflow: hidden;
-}
-section {
-	height: 100vh;
-	background: none;
-	overflow: hidden;
-
-	position: static;
-	top: 0;
-	left: 0;
-	background-attachment: fixed;
+	top: -20px;
 }
 
-section img {
-	position: absolute;
-	bottom: -100px;
-	left: 0px;
-	width: 70%;
-
-	object-fit: cover;
-}
-.textCenterParalax {
-	position: absolute;
-	bottom: -100%;
-	left: 50%;
-}
-.stars {
-	z-index: -2;
-	width: 100%;
-	height: 200%;
-}
-.mountain1 {
-	z-index: -1;
-
-	left: 50%;
-	bottom: -200px;
-}
-.mountain2 {
-	z-index: -1;
-
-	left: 25%;
-	bottom: -200px;
-}
-.mountain3 {
-	z-index: -1;
-
-	left: 0%;
-	bottom: -200px;
-}
-.mountain4 {
-	z-index: -1;
-
-	left: -20%;
-	bottom: -200px;
-}
-.mountain5 {
-	z-index: -1;
-
-	left: 75%;
-	bottom: -150px;
-}
-
-.bird1 {
-	width: 150px;
-
-	bottom: 550px;
-	left: 50px;
-}
-.bird2 {
-	width: 150px;
-	bottom: 250px;
-	left: 850px;
-}
-.bird3 {
-	width: 150px;
-
-	bottom: 250px;
-	left: 150px;
-}*/
 /*
 grid*/
 .gridContainer {
@@ -182,8 +99,157 @@ grid*/
 		grid-column: unset !important;
 		grid-row: unset !important;
 	}
+	.buttonHexagonAnimation:before {
+		width: 0px !important;
+		height: 0px !important;
+		
+	}
+	.buttonHexagonAnimation:after {
+		width: 0px !important;
+		height: 0px !important;
+	}
+	.buttonHexagonAnimation p { 
+		opacity: 0;
+	}
+	.buttonHexagonAnimation span {
+		font-size: 100px !important;;
 
+		position: absolute;
+		right: 100px;
+
+		height: 200px;
+		/*display: block;*/
+		line-height: 200px;
+		transform: rotateY(0deg) !important;
+
+		transform-origin: center;
+		transition: .5s;
+		overflow: visible;
+	}
 }
 
 
+/*paralax*/
+
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+	overflow-x: hidden !important;
+	padding: 0px;
+	margin: 0px;
+}
+
+header section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+}
+header section img{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+
+  object-fit: cover;
+}
+
+#sunParalax{
+  top: 200px;
+  object-fit: unset;
+  object-position: -50% 50%;
+}
+
+.content {
+	width: 100%;
+  	position: relative;
+  	margin-top: 100vh !important;
+  	background: url("https://img.freepik.com/free-vector/underground-cave-with-water_1308-16909.jpg?size=626&ext=jpg");
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	padding-bottom: 50px;
+  	/*padding: 100px;*/
+
+}
+
+.mainTextParalax {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform:translate(-50%, -50%); 
+  font-family: "KoHo", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 100px;
+
+  text-decoration: none;
+  color: #00181c;
+  z-index: 1;
+  opacity: 0;
+
+  transition: .5s;
+}
+.mainTextParalax:hover {
+	color: white;
+
+	transition: .5s;
+}
+
+
+
+
+.mainTextParalax span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  animation: bounce .3s ease infinite alternate;
+  font-family: 'Titan One', cursive;
+  font-size: 80px;
+  color: #FFF;
+  text-shadow: 0 1px 0 #CCC,
+               0 2px 0 #CCC,
+               0 3px 0 #CCC,
+               0 4px 0 #CCC,
+               0 5px 0 #CCC,
+               0 6px 0 transparent,
+               0 7px 0 transparent,
+               0 8px 0 transparent,
+               0 9px 0 transparent,
+               0 10px 10px rgba(0, 0, 0, .4);
+}
+
+.mainTextParalax span:nth-child(2) { animation-delay: .1s; }
+.mainTextParalax span:nth-child(3) { animation-delay: .2s; }
+.mainTextParalax span:nth-child(4) { animation-delay: .3s; }
+.mainTextParalax span:nth-child(5) { animation-delay: .4s; }
+.mainTextParalax span:nth-child(6) { animation-delay: .5s; }
+
+@keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #CCC,
+                 0 2px 0 #CCC,
+                 0 3px 0 #CCC,
+                 0 4px 0 #CCC,
+                 0 5px 0 #CCC,
+                 0 6px 0 #CCC,
+                 0 7px 0 #CCC,
+                 0 8px 0 #CCC,
+                 0 9px 0 #CCC,
+                 0 50px 25px rgba(0, 0, 0, .2);
+  }
+}
+
+
+
+
+
+
+  
 

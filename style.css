@@ -170,3 +170,13 @@ footer {
 		display: none;
 	}
 }
+
+@media (min-width: 1900px) {
+	header {
+		height: 1000px !important;
+	}
+	.headInfo {
+		padding-top: 250px;
+	}
+
+}

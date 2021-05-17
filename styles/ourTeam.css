@@ -28,6 +28,11 @@ h3 {
 
 	position: relative;
 	background-color: #5a5aff;
+
+	transform-style: preserve-3d;
+	transform: translateZ(20px);
+
+	box-shadow: 0 2px 20px rgba(0,0,0,0.5);
 }
 .participant p {
 	text-align: center;

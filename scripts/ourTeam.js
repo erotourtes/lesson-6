@@ -12,7 +12,7 @@ let text = [
 			//add elements
 			for(let i = 1; i <= text.length; i++){
 				let toAppend = $(`
-					<div class="participant">
+					<div class="participant"  data-tilt>
 						<div>
 							<img src="../img/jojo/${i}.png">
 							<div class="infoInParticipant">

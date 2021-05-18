@@ -190,8 +190,7 @@ header section img{
 
   text-decoration: none;
   color: #00181c;
-  z-index: 1;
-  opacity: 0;
+
 
   transition: .5s;
 }

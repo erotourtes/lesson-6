@@ -25,9 +25,12 @@ $(window).on("scroll", ()=>{
 	})
 	$("#rmParalax").css({
 		top: `${scrollTop * 0.2}px`,
-		left: `${scrollTop * 0.2}px`
+		//left: `${scrollTop * 0.2}px`
 	})
 	$("#cmParalax").css({
+		top: `${scrollTop * 0.2}px`
+	})
+	$("#cm1Paralax").css({
 		top: `${scrollTop * 0.2}px`
 	})
 	$("#lmParalax").css({
@@ -44,8 +47,7 @@ $(window).on("scroll", ()=>{
 	})
 
 	$(".mainTextParalax").animate({
-		top: `${50}%`,
+		top: `${50 - scrollTop * 0.05}%`,
 		left: `${75 - scrollTop * 0.1}%`,
-		opacity: `${1}`
 	}, 0)
 })
